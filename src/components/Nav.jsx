@@ -7,13 +7,13 @@ export default function Nav(){
                 <div className="w-full">
                     <img src="https://icons.veryicon.com/png/o/internet--web/common-icons-for-web-pages/01-magnifying-glass.png" alt="search magnifier" 
                     className="h-6 absolute left-5 top-5"/>
-                    <img src="https://icons.veryicon.com/png/o/miscellaneous/phoenix-project-icon-library/scan-59.png" alt="scan" 
-                    className="h-6 absolute right-20 top-5"/>
-                    <img src="https://cdn4.iconfinder.com/data/icons/basic-flat-ui-extra-set-200-item/76/ui_ux_minimalist_button_microphone_vouce_sound-512.png" alt="mic" 
-                    className="h-[2.1rem] absolute right-8 top-[.89rem]"/>
                     <input type="text" name="search" id="" placeholder="Search LiteLight" 
                     className="w-full py-2 pl-10 pr-28 rounded-md border-[2px] border-gray-300 font-medium 
                     focus:outline-0 caret-green-800"/>
+                    <img src="https://icons.veryicon.com/png/o/miscellaneous/phoenix-project-icon-library/scan-59.png" alt="scan" 
+                    className="h-6 absolute right-20 top-5 cursor-pointer"/>
+                    <img src="https://cdn4.iconfinder.com/data/icons/basic-flat-ui-extra-set-200-item/76/ui_ux_minimalist_button_microphone_vouce_sound-512.png" alt="mic" 
+                    className="h-[2.1rem] absolute right-8 top-[.89rem] cursor-pointer"/>
                 </div>
             </div>
         )
@@ -22,8 +22,8 @@ export default function Nav(){
     const Categories = () => {
         return (
             <div 
-            className="flex overflow-x-auto w-screen text-white [&_p]:mx-4 [&_p]:my-2 [&_p]:min-w-max
-            scrollbar">
+            className="flex overflow-x-auto w-screen text-white scrollbar [&_p]:border-[1px] [&_p]:rounded-sm [&_p]:border-transparent 
+            [&_p]:px-2 [&_p]:py-1 [&_p]:mx-2 [&_p]:my-1 [&_p]:min-w-max [&_p]:cursor-pointer hover:[&_p]:border-white">
                 <p>Lite Deals</p>
                 <p>Lighter Travel Guide</p>
                 <p>Plastic Lighters</p>
@@ -53,7 +53,7 @@ export default function Nav(){
     }
 
     return (
-        <nav className="bg-green-800">
+        <nav className="bg-green-800 ">
             {/* nav - search */}
             <Search />
             {/* nav - catagories */}
