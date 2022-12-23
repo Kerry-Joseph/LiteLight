@@ -22,8 +22,9 @@ export default function Nav(){
     const Categories = () => {
         return (
             <div 
-            className="flex overflow-x-auto w-screen text-white scrollbar [&_p]:border-[1px] [&_p]:rounded-sm [&_p]:border-transparent 
-            [&_p]:px-2 [&_p]:py-1 [&_p]:mx-2 [&_p]:my-1 [&_p]:min-w-max [&_p]:cursor-pointer hover:[&_p]:border-white">
+            className="flex overflow-x-auto w-screen text-white scrollbar 
+            [&_p]:border-[1px] [&_p]:rounded-sm [&_p]:border-transparent hover:[&_p]:border-white
+            [&_p]:px-2 [&_p]:py-1 [&_p]:mx-2 [&_p]:my-1 [&_p]:min-w-max [&_p]:cursor-pointer">
                 <p>Lite Deals</p>
                 <p>Lighter Travel Guide</p>
                 <p>Plastic Lighters</p>
@@ -43,9 +44,9 @@ export default function Nav(){
             <div 
             className="bg-green-700 relative">
                 <img src="https://cdn-icons-png.flaticon.com/512/16/16199.png" alt="map dropper" 
-                className="absolute h-6 left-4 top-3"/>
+                className="absolute h-5 left-4 top-3"/>
                 <p
-                className="py-3 px-12 text-white">
+                className="py-3 px-12 text-white text-sm">
                     Sign-in / Add Delivery Address
                 </p>
             </div>
