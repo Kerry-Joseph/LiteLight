@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* nav - search */}
+      {/* nav - catagories */}
+      {/* nav - deliver to/sign in - mobile only */}
+      {/* nav - navigation button - bottom of screen - mobile only */}
+      {/* main - banner image */}
+      {/* main - recommendations - mobile only */ }
+      {/* main - internet provider banner ad - mobile only */}
+      {/* main - sale banner ad - mobile only */}
+      {/* main - content block - 4 lighters per block  */}
+      {/* footer - back to top banner button */}
+      {/* footer - company info */}
+      {/* footer - logo/language/country */}
+      {/* footer - tos */}
     </div>
   );
 }
