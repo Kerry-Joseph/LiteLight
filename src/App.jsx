@@ -1,5 +1,3 @@
-import './App.css';
-
 import Nav from './components/Nav';
 import Main from './components/Main';
 import Footer from './components/Footer';
@@ -9,10 +7,6 @@ function App() {
   return (
     <div className="App bg-red-600">
       <Nav />
-      {/* nav - search */}
-      {/* nav - catagories */}
-      {/* nav - deliver to/sign in - mobile only */}
-      {/* nav - navigation button - bottom of screen - mobile only */}
       <Main />
       {/* main - banner image */}
       {/* main - recommendations - mobile only */ }
