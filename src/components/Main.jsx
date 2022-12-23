@@ -79,11 +79,20 @@ export default function Main(){
                 <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/banImageFive.png"})`}}
                 className={`${bannerImage.imageFive} bg-cover bg-center`}></div>
             </div>
+
             <div
             style={{background: "linear-gradient(0deg, rgba(209, 213, 219, 1) 80%, rgba(1,25,56,0) 100%)"}} 
-            className="h-48 w-full bg-gradient-to-t from-gray-300 -mt-10 z-20">
+            className="h-48 w-full bg-gradient-to-t from-gray-300 -mt-10 z-20 [&_div]:h-[11.5rem] 
+            [&_div]:min-w-[8rem]  [&_div]:bg-white [&_div]:shadow-md [&_div]:rounded [&_div]:mx-1  
+            flex px-1 overflow-x-auto scrollbar">
                 {/* main - recommendations - mobile only */ }
-
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
             {/* main - internet provider banner ad - mobile only */}
             {/* main - sale banner ad - mobile only */}
