@@ -97,6 +97,11 @@ export default function Main(){
                 </div>
                 {/* main - internet provider banner ad - mobile only */}
                 {/* main - sale banner ad - mobile only */}
+                <div
+                style={{background: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 80%)"}}
+                className="hidden lg:block w-full h-96 -mt-96">
+                    {/* main - larger screen fade div */}
+                </div>
                 {/* main - content block - 4 lighters per block  */}
             </main>
         </main>
