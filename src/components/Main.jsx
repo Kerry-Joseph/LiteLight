@@ -65,8 +65,8 @@ export default function Main(){
   
 
     return (
-        <main className="flex justify-center">
-            <main className="relative max-w-[1480px] w-full bg-gray-300">
+        <main className="flex justify-center bg-gray-300 lg:bg-gray-200">
+            <main className="relative max-w-[1500px] w-full ">
 
                 <div className="[&_div]:h-64 lg:[&_div]:h-[42rem] [&_div]:w-full">
                     {/* main - banner images */}
@@ -103,16 +103,33 @@ export default function Main(){
                 </div>
 
                 <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/Adver--Banners--150x750px-RIOT.jpg"})`}}
-                className='h-20 w-full bg-center bg-cover mt-2 md:hidden'>
+                className='h-20 w-full bg-center bg-cover mt-2 mb-1 md:hidden'>
                     {/* main - banner ad - mobile only */}
                 </div>
 
                 <div
-                style={{background: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 80%)"}}
+                style={{background: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgb(229, 231, 235) 80%)"}}
                 className="hidden lg:block w-full h-96 -mt-96">
-                    {/* main - larger screen fade div */}
+                    {/* main - fade div - larger screens only */}
                 </div>
-                {/* main - content block - 4 lighters per block  */}
+
+                <div
+                className="flex flex-col [&_div]:w-full [&_div]:h-[26rem] [&_div]:bg-white [&_div]:my-1
+                md:[&_div]:my-0 md:grid grid-cols-2 lg:grid-cols-4 md:gap-5 lg:-mt-[26rem] md:px-5">
+                    {/* main - content block - 4 lighters per block  */}
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </main>
         </main>
     )
