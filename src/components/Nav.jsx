@@ -89,7 +89,7 @@ export default function Nav(){
                     {/* accounts and lists */}
                     <p 
                     className="text-sm font-medium">
-                        Sign-in /
+                        Sign-in 
                     </p>
                     <p
                     className="text-sm font-bold">
