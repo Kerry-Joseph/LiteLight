@@ -1,0 +1,66 @@
+{
+  "bic" : {
+    "brand" : "Bic",
+    "name" : [
+      "Astrology | Leo",
+      "Quality Classics",
+      "Colorado Color Company",
+      "New York | Subway"
+
+    ],
+    "image" : [
+      "https://cdn.shopify.com/s/files/1/2636/1058/products/astrology-lighter-aquarius-aries-box-cancer-bic-disposable-744.jpg",
+      "https://www.cvs.com/bizcontent/merchandising/productimages/large/70330603011_5.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHPnhu9ib0Z32AMIpv0QvVcwwR533t48eZEA&usqp=CAU",
+      "https://cdn.shopify.com/s/files/1/2636/1058/products/new-york-lighter-bffpair-cones-dadday-for-himthem-gift-him-nyc-427.jpg"
+    ]  
+  },
+  "zippo" : {
+    "brand" : "Zippo",
+    "name" : [
+      "Vintage | Year 65",
+      "Route 66",
+      "Davy Jones Lock Light",
+      "High Society | Rose Golden"
+
+    ],
+    "image" : [
+      "https://cf.ltkcdn.net/antiques/images/orig/268806-1600x1030-vintage-zippo-lighters-spark-up-your-collection.jpg",
+      "https://cdn11.bigcommerce.com/s-e4r9s/images/stencil/1280x1280/products/212/1097/DSCF4144__24411.1437084488.JPG?c=2",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTatqG3bgbaUunUqcmitQdQoWgvjhfQ6cD30Q&usqp=CAU",
+      "https://theawesomer.com/photos/2022/06/zippo_classic_copper_lighter_t.jpg"
+    ]  
+  },
+  "colibri" : {
+    "brand" : "Colibri",
+    "name" : [
+      "Rally | 1928 Cigat Dojo",
+      "Apex",
+      "Triple Jet",
+      "Single Jet"
+
+    ],
+    "image" : [
+      "https://u2d5w3f4.rocketcdn.me/wp-content/uploads/2017/06/Colibri-Rally-lighter.jpg",
+      "https://cdn3.volusion.com/jzrhu.xwsqd/v/vspfiles/photos/CALC-LI410-2.jpg?v-cache=1664883185",
+      "https://stogiereview.com/wp-content/uploads/2014/12/Colibri-Astoria-1.jpg",
+      "https://u2d5w3f4.rocketcdn.me/wp-content/uploads/2018/05/colibri-daytona-lighter-review.jpg"
+    ]  
+  },
+  "lotus" : {
+    "brand" : "Lotus",
+    "name" : [
+      "Tamarac FL",
+      "Cohiba | Three Torch",
+      "L55 Droid",
+      "L52 Orion"
+
+    ],
+    "image" : [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4ZZwkpvZXWm0U55OJrtKWK64yFBYg2WxRLA&usqp=CAU",
+      "https://img.cigar.com/products/CGALIT03-1000.png?v=514691",
+      "https://i.ytimg.com/vi/BITUeazuBZk/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/dz3tQye3Ps4/maxresdefault.jpg"
+    ]  
+  }
+}
