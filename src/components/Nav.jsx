@@ -6,7 +6,7 @@ export default function Nav(){
             className="flex justify-center py-1 md:bg-green-900">
 
                 <div className="hidden md:flex ml-4 mr-1 border border-transparent hover:border-white items-center font-black 
-                text-white rounded-sm px-2 text-2xl">
+                text-white rounded-sm px-2 text-2xl cursor-pointer">
                     {/* logo */}
                     <h1>LiteLight</h1>
                 </div>
@@ -14,7 +14,7 @@ export default function Nav(){
 
 
                 <div className="hidden lg:flex relative text-white min-w-max ml-1 mr-5 border border-transparent hover:border-white 
-                rounded-sm pl-6 pr-2  justify-center flex-col">
+                rounded-sm pl-6 pr-2  justify-center flex-col cursor-pointer">
                     {/* devliver to */}
                     <img src="https://cdn-icons-png.flaticon.com/512/16/16199.png" alt="map dropper" 
                     className="h-4 absolute left-1.5 top-5"/>
@@ -38,7 +38,7 @@ export default function Nav(){
                     className="h-6 absolute left-6 md:left-3 top-2.5 md:hidden"/>
 
                     <div className="hidden md:flex items-center absolute bg-gray-200 rounded-l-md h-full w-14 border-r-[1px] 
-                    border-gray-400 p-3 hover:bg-gray-300">
+                    border-gray-400 p-3 hover:bg-gray-300 cursor-pointer">
                         <p
                         className="text-xs">
                             All
@@ -53,7 +53,7 @@ export default function Nav(){
                     focus:outline-0 caret-green-800"/>
 
                     <div className="hidden md:flex items-center absolute right-0 top-0 bg-orange-300 rounded-r-md h-full w-12 p-3
-                     hover:bg-orange-400">
+                     hover:bg-orange-400 cursor-pointer">
                         <img src="https://icons.veryicon.com/png/o/internet--web/common-icons-for-web-pages/01-magnifying-glass.png" 
                         alt="search magnifier" 
                         className="h-6 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"/>
@@ -69,7 +69,7 @@ export default function Nav(){
 
 
                 <div className="hidden lg:flex border border-transparent hover:border-white ml-5 mr-1 px-2 pr-4 items-center 
-                text-white min-w-max relative rounded-sm">
+                text-white min-w-max relative rounded-sm cursor-pointer">
                     {/* language */}
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/255px-Flag_of_the_United_States.svg.png" 
                     alt="american flag" 
@@ -85,7 +85,7 @@ export default function Nav(){
 
 
                 <div className="hidden md:flex relative text-white min-w-max ml-1 mr-1 border border-transparent hover:border-white 
-                rounded-sm pl-2 pr-6 justify-center flex-col">
+                rounded-sm pl-2 pr-6 justify-center flex-col cursor-pointer">
                     {/* accounts and lists */}
                     <p 
                     className="text-sm font-medium">
@@ -102,7 +102,7 @@ export default function Nav(){
 
                
                 <div className="hidden lg:flex relative text-white min-w-max ml-1 mr-1 border border-transparent hover:border-white 
-                rounded-sm px-2 justify-center flex-col">
+                rounded-sm px-2 justify-center flex-col cursor-pointer">
                     {/* returns and orders */}
                     <p 
                     className="text-sm font-medium">
@@ -117,7 +117,7 @@ export default function Nav(){
 
 
                 <div className="hidden md:flex relative text-white min-w-max ml-1 mr-5 border border-transparent hover:border-white 
-                rounded-sm px-2 justify-center items-end">
+                rounded-sm px-2 justify-center items-end cursor-pointer">
                     {/* cart */}
                     <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="cart" 
                     className="h-8 mb-2"/>
@@ -137,7 +137,7 @@ export default function Nav(){
             className="flex overflow-x-auto w-screen text-white scrollbar 
             [&_p]:border-[1px] [&_p]:rounded-sm [&_p]:border-transparent hover:[&_p]:border-white
             [&_p]:px-2 [&_p]:py-1 [&_p]:ml-1 [&_p]:my-1 [&_p]:min-w-max [&_p]:cursor-pointer
-            font-medium text-sm md:bg-green-700">
+            font-medium text-sm md:bg-green-700 lg:px-2">
                 <p className="hidden md:flex items-center">
                     <img src="https://static.thenounproject.com/png/67738-200.png" alt="menu icon" 
                     className="h-5"/>
