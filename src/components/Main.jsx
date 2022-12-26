@@ -124,6 +124,8 @@ export default function Main(){
                     <MainSection lighter={lighters.bic} />
                     <MainSection lighter={lighters.zippo} />
                     <MainSection lighter={lighters.colibri} />
+
+
                     <section 
                     className="flex flex-col h-[26.2rem] items-center justify-between text-gray-900">
                     {/* main - easy returns & rewards - larger screens only */}
@@ -165,7 +167,10 @@ export default function Main(){
                             </p>
                         </div>
                     </section>
+
+
                     <MainSection lighter={lighters.lotus} />
+
                     <section></section>
                     <section></section>
                     <section></section>
