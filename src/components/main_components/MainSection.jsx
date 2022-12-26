@@ -1,9 +1,9 @@
 export default function MainSection({ lighter }) {
     return (
-        <section className={` grid grid-cols-2 p-4 px-5 gap-x-4 grid-rows-[auto_1fr_1fr_auto] 
-        content-between`}>
+        <section className="grid grid-cols-2 p-4 px-5 gap-x-4 grid-rows-[auto_1fr_1fr_auto] 
+        content-between w-full h-[31rem] lg:h-[26.2rem] bg-white my-1 md:my-0 text-gray-900">
 
-            <h2 className="col-span-2 pb-2 font-bold text-2xl lg:text-xl">
+            <h2 className="col-span-2 pb-2 font-bold text-2xl lg:text-xl ">
                 {lighter.brand}
             </h2>
 
