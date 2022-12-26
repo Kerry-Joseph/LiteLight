@@ -10,11 +10,11 @@ export default function MainSection({ lighter }) {
 
 
             <div
-            className="w-full h-full relative lg:flex lg:flex-col">
+            className="w-full h-full relative lg:flex lg:flex-col cursor-pointer">
 
                 <div
                 style={{backgroundImage: `url(${lighter.image[0]})`}} 
-                className='h-[10.2rem] lg:h-[8.3rem] bg-cover mt-2 lg:mt-1'>
+                className='h-[10.2rem] lg:h-[8.3rem] bg-cover mt-2 lg:mt-1 bg-center'>
                 </div>
 
                 <span className="absolute lg:relative bottom-0 text-ellipsis w-full 
@@ -27,11 +27,11 @@ export default function MainSection({ lighter }) {
            
 
             <div
-            className="w-full h-full relative lg:flex lg:flex-col">
+            className="w-full h-full relative lg:flex lg:flex-col cursor-pointer">
 
                 <div
                 style={{backgroundImage: `url(${lighter.image[1]})`}} 
-                className='h-[10.2rem] lg:h-[8.3rem] bg-cover mt-2 lg:mt-1'>
+                className='h-[10.2rem] lg:h-[8.3rem] bg-cover mt-2 lg:mt-1 bg-center'>
                 </div>
 
                 <span className="absolute lg:relative bottom-0 text-ellipsis w-full 
@@ -44,11 +44,11 @@ export default function MainSection({ lighter }) {
            
 
             <div
-            className="w-full h-full relative lg:flex lg:flex-col">
+            className="w-full h-full relative lg:flex lg:flex-col cursor-pointer">
 
                 <div
                 style={{backgroundImage: `url(${lighter.image[2]})`}} 
-                className='h-[10.2rem] lg:h-[8.3rem] bg-cover mt-2 lg:mt-1'>
+                className='h-[10.2rem] lg:h-[8.3rem] bg-cover mt-2 lg:mt-1 bg-center'>
                 </div>
 
                 <span className="absolute lg:relative bottom-0 text-ellipsis w-full 
@@ -61,11 +61,11 @@ export default function MainSection({ lighter }) {
            
 
             <div
-            className="w-full h-full relative lg:flex lg:flex-col">
+            className="w-full h-full relative lg:flex lg:flex-col cursor-pointer">
 
                 <div
                 style={{backgroundImage: `url(${lighter.image[3]})`}} 
-                className='h-[10.2rem] lg:h-[8.3rem] bg-cover mt-2 lg:mt-1'>
+                className='h-[10.2rem] lg:h-[8.3rem] bg-cover mt-2 lg:mt-1 bg-center'>
                 </div>
 
                 <span className="absolute lg:relative bottom-0 text-ellipsis w-full 
@@ -78,7 +78,7 @@ export default function MainSection({ lighter }) {
            
 
             <div className="col-span-2 flex items-center h-10 font-medium  lg:text-[.9rem] text-cyan-600
-            hover:text-orange-600">
+            hover:text-orange-600 cursor-pointer">
                 <p>See all {lighter.brand}</p>
             </div>
             

@@ -13,7 +13,7 @@ export default function Main(){
         imageFive : 'block'
     })
 
-    console.log(lighters)
+  
 
     useEffect(() => {   
         setTimeout(() => {
