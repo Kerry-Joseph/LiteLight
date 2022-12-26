@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react"
 
+import MainSection from "./main_components/MainSection"
+
+import lighters from './../lighters.json'
+
 export default function Main(){
     const [bannerImage, setBannerImage] = useState({
         imageOne : 'hidden',
@@ -9,6 +13,7 @@ export default function Main(){
         imageFive : 'block'
     })
 
+    console.log(lighters)
 
     useEffect(() => {   
         setTimeout(() => {
@@ -60,8 +65,6 @@ export default function Main(){
         }, 5000)
     }, [bannerImage])
 
-
-
   
 
     return (
@@ -84,8 +87,8 @@ export default function Main(){
 
                 <div
                 style={{background: "linear-gradient(0deg, rgba(209, 213, 219, 1) 80%, rgba(1,25,56,0) 100%)"}} 
-                className="lg:hidden h-48 w-full bg-gradient-to-t from-gray-300 -mt-10 z-20 [&_section]:h-[11.5rem] 
-                [&_section]:min-w-[9rem]  [&_section]:bg-white [&_section]:shadow-md [&_section]:rounded [&_section]:mx-1  
+                className="lg:hidden h-48 w-full bg-gradient-to-t from-gray-300 -mt-10 z-20 [&_div]:h-[11.5rem] 
+                [&_div]:min-w-[9rem]  [&_div]:bg-white [&_div]:shadow-md [&_div]:rounded [&_div]:mx-1  
                 flex px-1 overflow-x-auto scrollbar">
                     {/* main - recommendations - mobile only */ }
                     <div></div>
@@ -114,21 +117,19 @@ export default function Main(){
                 </div>
 
                 <div
-                className="flex flex-col [&_div]:w-full [&_div]:h-[26rem] [&_div]:bg-white [&_div]:my-1
-                md:[&_div]:my-0 md:grid grid-cols-2 lg:grid-cols-4 md:gap-5 lg:-mt-[26rem] md:px-5">
+                className="flex flex-col [&_section]:w-full [&_section]:h-[31rem] lg:[&_section]:h-[26.2rem] [&_section]:bg-white [&_section]:my-1
+                md:[&_section]:my-0 md:grid grid-cols-2 lg:grid-cols-4 md:gap-5 lg:-mt-[26rem] md:px-5">
                     {/* main - content block - 4 lighters per block  */}
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    {/* <MainSection lighter= */}
+                    <MainSection lighter={lighters.bic} />
+                    <MainSection lighter={lighters.zippo} />
+                    <MainSection lighter={lighters.colibri} />
+                    <MainSection lighter={lighters.lotus} />
+                    <section></section>
+                    <section></section>
+                    <section></section>
+                    <section></section>
+                    
                 </div>
             </main>
         </main>
