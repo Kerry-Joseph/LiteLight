@@ -1,89 +1,16 @@
-import { useEffect, useState } from "react"
-
 import MainSection from "./main_components/MainSection"
 
 import lighters from './../lighters.json'
 
+import Banner from "./main_components/Banner"
+
 export default function Main(){
-    const [bannerImage, setBannerImage] = useState({
-        imageOne : 'hidden',
-        imageTwo : 'hidden',
-        imageThree : 'hidden',
-        imageFour : 'hidden',
-        imageFive : 'block'
-    })
-
-  
-
-    useEffect(() => {   
-        setTimeout(() => {
-            if(bannerImage.imageOne === 'block'){
-                setBannerImage({
-                    imageOne : 'hidden',
-                    imageTwo : 'block',
-                    imageThree : 'hidden',
-                    imageFour : 'hidden',
-                    imageFive : 'hidden'
-                })
-            } else
-            if(bannerImage.imageTwo === 'block'){
-                setBannerImage({
-                    imageOne : 'hidden',
-                    imageTwo : 'hidden',
-                    imageThree : 'block',
-                    imageFour : 'hidden',
-                    imageFive : 'hidden'
-                })
-            } else
-            if(bannerImage.imageThree === 'block'){
-                setBannerImage({
-                    imageOne : 'hidden',
-                    imageTwo : 'hidden',
-                    imageThree : 'hidden',
-                    imageFour : 'block',
-                    imageFive : 'hidden'
-                })
-            } else 
-            if(bannerImage.imageFour === 'block'){
-                setBannerImage({
-                    imageOne : 'hidden',
-                    imageTwo : 'hidden',
-                    imageThree : 'hidden',
-                    imageFour : 'hidden',
-                    imageFive : 'block'
-                })
-            } else 
-            if(bannerImage.imageFive === 'block'){
-                setBannerImage({
-                    imageOne : 'block',
-                    imageTwo : 'hidden',
-                    imageThree : 'hidden',
-                    imageFour : 'hidden',
-                    imageFive : 'hidden'
-                })
-            } 
-        }, 5000)
-    }, [bannerImage])
-
-  
-
+    
     return (
         <main className="flex justify-center bg-gray-300 lg:bg-gray-200">
             <main className="relative max-w-[1500px] w-full ">
 
-                <div className="[&_div]:h-64 lg:[&_div]:h-[42rem] [&_div]:w-full">
-                    {/* main - banner images */}
-                    <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/banImgOne.webp"})`}}
-                    className={`${bannerImage.imageOne} bg-[center_top_-7rem] lg:bg-cover lg:bg-[center_top_-24rem]`}></div>
-                    <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/banImageTwo.jpg"})`}}
-                    className={`${bannerImage.imageTwo} bg-center bg-top bg-cover lg:bg-[center_top_-10rem]`}></div>
-                    <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/banImgThree.jpg"})`}}
-                    className={`${bannerImage.imageThree} bg-center lg:bg-cover`}></div>
-                    <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/banImageFour.png"})`}}
-                    className={`${bannerImage.imageFour} bg-cover`}></div>
-                    <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/banImageFive.png"})`}}
-                    className={`${bannerImage.imageFive} bg-cover bg-center`}></div>
-                </div>
+                <Banner />
 
                 <div
                 style={{background: "linear-gradient(0deg, rgba(209, 213, 219, 1) 80%, rgba(1,25,56,0) 100%)"}} 
