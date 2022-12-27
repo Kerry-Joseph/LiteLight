@@ -72,11 +72,11 @@ export default function Main(){
                             </p>
                         </div>
 
-                        
+                        {/* VISA */}
                         <div
                         className="bg-[url(https://www.gannett-cdn.com/presto/2021/08/17/USAT/d396978a-8f42-4c6a-8630-00e3d1a540b4-2021_06_04_DEALS_ChaseCC.png?crop=2987,1681,x12,y0&width=2987&height=1681&format=pjpg&auto=webp)]
                         h-[15.6rem] w-full lg:max-w-[18.5rem] lg:min-w-[1.5rem] lg:w-full bg-cover bg-center border border-gray-500 p-4 pt-3 flex flex-col 
-                        justify-between cursor-pointer">
+                        justify-between cursor-pointer overflow-hidden">
                             <p className="font-bold text-2xl w-5/6 leading-6 text-white leading-7"
                             style={{textShadow: "1px 1px 2px black"}}>
                                 Earn 2% back at restaurants whether you dine in or take out
