@@ -113,8 +113,6 @@ export default function Banner() {
                 <h2 className="self-end lg:self-start lg:mt-4 text-xl underline underline-offset-4 font-medium
                 cursor-pointer">
                     Tuesday Deals
-                    <img src="https://www.freeiconspng.com/uploads/curved-white-arrow-png-0.png" alt="Arrow" 
-                    className="hidden lg:block h-5 rotate-90 absolute left-[38.7rem] top-[9.4rem]"/>
                 </h2>
             </div>
 
