@@ -105,7 +105,7 @@ export default function Banner() {
             
             <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/torches.png"})`}}
             className={`${bannerImage.torches} bg-cover bg-center flex justify-between lg:justify-start flex-col
-            text-white p-10 pb-16 md:bg-[center_top_-11rem] lg:pl-[30rem] lg:pt-20 z-0`}>
+            text-white p-10 pb-16 md:bg-[center_top_-11rem] lg:pl-[25rem] xl:pl-[30rem] lg:pt-20 z-0`}>
                 {/* TORCHES */}
                 <h1 className="text-2xl md:text-5xl md:font-bold tracking-wide font-semibold">
                     50% off Torches
