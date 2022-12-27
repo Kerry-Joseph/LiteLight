@@ -1,8 +1,8 @@
-import MainSection from "./main_components/MainSection"
+import MainSection from "./components/MainSection"
 
-import lighters from './../lighters.json'
+import lighters from './lighters.json'
 
-import Banner from "./main_components/Banner"
+import Banner from "./components/Banner"
 
 export default function Main(){
     

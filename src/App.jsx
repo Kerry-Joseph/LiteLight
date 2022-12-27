@@ -1,6 +1,6 @@
-import Nav from './components/Nav';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import Nav from './Nav';
+import Main from './Main';
+import Footer from './Footer';
 
 
 function App() {
