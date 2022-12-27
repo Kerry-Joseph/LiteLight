@@ -75,7 +75,7 @@ export default function Banner() {
             text-center md:text-gray-900 lg:text-white`}>
                 {/* BIC GALLERY */}
                 <h1 className="lg:underline lg:underline-offset-[1rem]">Bic Week</h1>
-                <h1 className="pl-20 md:pl-64 hidden md:block lg:pl-0 text-3xl mt-4 font-semibold">
+                <h1 className="pl-20 md:pl-64 hidden lg:block lg:pl-0 text-3xl mt-4 font-semibold ">
                     Jan 1st - Jan 7th
                 </h1>
 
