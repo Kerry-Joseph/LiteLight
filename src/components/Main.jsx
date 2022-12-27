@@ -54,7 +54,7 @@ export default function Main(){
 
 
                     <section 
-                    className="flex flex-col h-[26.2rem] items-center justify-between text-gray-900">
+                    className="flex flex-col h-[25.2rem] md:h-[26.2rem] items-center justify-between text-gray-900">
                     {/* main - easy returns & rewards - larger screens only */}
                         <div 
                         className=" h-[9.4rem] w-full bg-white flex flex-col justify-between p-4 px-5 pb-[1.4rem] pr-10">
@@ -71,15 +71,18 @@ export default function Main(){
                                 Learn more
                             </p>
                         </div>
+
+                        
                         <div
                         className="bg-[url(https://www.gannett-cdn.com/presto/2021/08/17/USAT/d396978a-8f42-4c6a-8630-00e3d1a540b4-2021_06_04_DEALS_ChaseCC.png?crop=2987,1681,x12,y0&width=2987&height=1681&format=pjpg&auto=webp)]
-                        h-[15.6rem] w-[18.5rem] bg-cover bg-center border border-gray-500 p-4 pt-3 flex flex-col justify-between">
+                        h-[15.6rem] w-full lg:max-w-[18.5rem] lg:min-w-[1.5rem] lg:w-full bg-cover bg-center border border-gray-500 p-4 pt-3 flex flex-col 
+                        justify-between cursor-pointer">
                             <p className="font-bold text-2xl w-5/6 leading-6 text-white leading-7"
                             style={{textShadow: "1px 1px 2px black"}}>
                                 Earn 2% back at restaurants whether you dine in or take out
                             </p>
                             <p
-                            className="font-bold text-lg text-white underline underline-offset-4 cursor-pointer"
+                            className="font-bold text-lg text-white underline underline-offset-4"
                             style={{textShadow: "1px 1px 2px black"}}>
                                 Learn more
                             </p>
