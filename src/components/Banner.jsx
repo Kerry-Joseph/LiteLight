@@ -8,7 +8,7 @@ export default function Banner() {
         bicGallery : 'block',
         zippo65 : 'hidden',
         imageThree : 'hidden',
-        imageFour : 'hidden',
+        matches : 'hidden',
         torches : 'hidden'
     })
 
@@ -19,8 +19,7 @@ export default function Banner() {
                 setBannerImage({
                     bicGallery : 'hidden',
                     zippo65 : 'block',
-                    imageThree : 'hidden',
-                    imageFour : 'hidden',
+                    matches : 'hidden',
                     torches : 'hidden'
                 })
             } else
@@ -28,26 +27,15 @@ export default function Banner() {
                 setBannerImage({
                     bicGallery : 'hidden',
                     zippo65 : 'hidden',
-                    imageThree : 'block',
-                    imageFour : 'hidden',
-                    torches : 'hidden'
-                })
-            } else
-            if(bannerImage.imageThree === 'block'){
-                setBannerImage({
-                    bicGallery : 'hidden',
-                    zippo65 : 'hidden',
-                    imageThree : 'hidden',
-                    imageFour : 'block',
+                    matches : 'block',
                     torches : 'hidden'
                 })
             } else 
-            if(bannerImage.imageFour === 'block'){
+            if(bannerImage.matches === 'block'){
                 setBannerImage({
                     bicGallery : 'hidden',
                     zippo65 : 'hidden',
-                    imageThree : 'hidden',
-                    imageFour : 'hidden',
+                    matches : 'hidden',
                     torches : 'block'
                 })
             } else 
@@ -55,8 +43,7 @@ export default function Banner() {
                 setBannerImage({
                     bicGallery : 'block',
                     zippo65: 'hidden',
-                    imageThree : 'hidden',
-                    imageFour : 'hidden',
+                    matches : 'hidden',
                     torches : 'hidden'
                 })
             } 
@@ -69,10 +56,10 @@ export default function Banner() {
         <div className="[&_div]:h-64 lg:[&_div]:h-[42rem] [&_div]:w-full">
             {/* main - banner images */}
 
-            <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/bic_gallery.webp"})`, textShadow: "3px 3px 3px black"}}
+            <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/bic_gallery.webp"})`, textShadow: "1px 1px 2px black"}}
             className={`${bannerImage.bicGallery} bg-[center_top_-7rem] lg:bg-cover lg:bg-[center_top_-30rem]
             justify-center lg:justify-between lg:px-5 text-6xl lg:text-8xl pt-32 md:pt-0 lg:pt-16 text-white font-black
-            text-center md:text-gray-900 lg:text-green-400`}>
+            text-center md:text-green-400`}>
                 {/* BIC WEEK */}
                 <h1 className="lg:underline lg:underline-offset-[1rem]">Bic Week</h1>
                 <h1 className="pl-20 md:pl-64 hidden lg:block lg:pl-0 text-3xl mt-4 font-semibold ">
@@ -102,11 +89,18 @@ export default function Banner() {
                 </p>
             </div>
 
-
-            <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/banImgThree.jpg"})`}}
-            className={`${bannerImage.imageThree} bg-center lg:bg-cover`}></div>
-            <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/banImageFour.png"})`}}
-            className={`${bannerImage.imageFour} bg-cover`}></div>
+            <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/matches.png"})`, textShadow: '2px 2px 2px black'}}
+            className={`${bannerImage.matches} bg-cover flex flex-col pb-14 font-lora text-white
+            font-bold text-3xl items-center justify-end md:bg-[center_top_-3rem] lg:bg-[center_top_-5rem] lg:justify-start 
+            lg:pt-10`}>
+                {/* MATCHES */}
+                <h1 className="underline underline-offset-8 text-base lg:text-xl">
+                    Twin Royalty
+                </h1>
+                <h2 className="text-lg md:text-5xl lg:text-6xl">
+                    Infinity Match
+                </h2>
+            </div>
             
             
             <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/torches.png"})`}}
