@@ -1,11 +1,34 @@
 import MainSection from "./components/MainSection"
 
 import lighters from './lighters.json'
+import recs from './recommendations.json'
 
 import Banner from "./components/Banner"
 
 export default function Main(){
+
+
+    const MobileRecs = () => (
+        recs.map(rec => {
+            return (
+                <div className="flex flex-col justify-between">
+                    <h1 className="pt-1.5 px-2">
+                        {rec.title}
+                    </h1>
+
+                    <section
+                    style={{backgroundImage: `url(${rec.img})`}}
+                    className="h-[8rem] bg-cover bg-center rounded-b-md">
+
+                    </section>
+                </div>
+            )
+        })
+    )
     
+
+    console.log(recs)
+
     return (
         <main className="flex justify-center bg-gray-300 lg:bg-gray-200">
             <main className="relative max-w-[1500px] w-full ">
@@ -18,13 +41,7 @@ export default function Main(){
                 [&_div]:min-w-[9rem]  [&_div]:bg-white [&_div]:shadow-md [&_div]:rounded [&_div]:mx-1  
                 flex px-1 overflow-x-auto scrollbar">
                     {/* main - recommendations - mobile only */ }
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <MobileRecs />
                 </div>
 
                 <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/Mobile_AD_FORMATS3-1.png"})`}}
