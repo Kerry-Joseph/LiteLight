@@ -80,9 +80,9 @@ export default function Banner() {
                 <h2 className="font-black text-gray-900 w-1/3 md:text-xl">
                     Year 65
                 </h2>
-                <p className="absolute w-1/3 py-8 md:font-bold md:text-xl md:-ml-10">
+                <p className="absolute w-1/3 py-8 md:font-bold md:text-4xl md:-ml-10">
                     50% off
-                    <span className="text-xs text-green-700 pl-2"
+                    <span className="text-sm text-green-700 pl-2"
                     style={{textShadow : "1px 1px 2px white"}}>
                         Lite Members exclusive
                     </span> 
