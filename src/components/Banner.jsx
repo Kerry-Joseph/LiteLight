@@ -7,7 +7,6 @@ export default function Banner() {
     const [bannerImage, setBannerImage] = useState({
         bicGallery : 'block',
         zippo65 : 'hidden',
-        imageThree : 'hidden',
         matches : 'hidden',
         torches : 'hidden'
     })
@@ -30,7 +29,7 @@ export default function Banner() {
                     matches : 'block',
                     torches : 'hidden'
                 })
-            } else 
+            } else
             if(bannerImage.matches === 'block'){
                 setBannerImage({
                     bicGallery : 'hidden',
