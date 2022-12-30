@@ -27,8 +27,6 @@ export default function Main(){
     )
     
 
-    console.log(recs)
-
     return (
         <main className="flex justify-center bg-gray-300 lg:bg-gray-200">
             <main className="relative max-w-[1500px] w-full ">
