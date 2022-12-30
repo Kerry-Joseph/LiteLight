@@ -10,10 +10,7 @@ function App() {
       <Main />
       
       <Footer />
-      {/* footer - back to top banner button */}
-      {/* footer - company info */}
-      {/* footer - logo/language/country */}
-      {/* footer - tos */}
+     
     </div>
   );
 }
