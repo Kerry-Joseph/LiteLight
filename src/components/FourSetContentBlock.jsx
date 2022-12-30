@@ -1,4 +1,4 @@
-export default function MainSection({ lighter }) {
+export default function FourSetContentBlock({ lighter }) {
     return (
         <section className="grid grid-cols-2 p-4 px-5 gap-x-4 grid-rows-[auto_1fr_1fr_auto] 
         content-between w-full h-[31rem] lg:h-[26.2rem] bg-white my-1 md:my-0 text-gray-900">
@@ -77,7 +77,7 @@ export default function MainSection({ lighter }) {
 
            
 
-            <div className="col-span-2 flex items-center h-10 font-medium  lg:text-[.9rem] text-cyan-600
+            <div className="col-span-2 flex items-center h-10 font-medium  text-[.9rem] text-cyan-600
             hover:text-orange-600 cursor-pointer">
                 <p>See all {lighter.brand}</p>
             </div>

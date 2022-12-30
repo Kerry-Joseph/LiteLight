@@ -2,52 +2,52 @@ export default function Footer(){
     return (
         <div className="pb-12 md:pb-0">
             <div className="bg-[rgb(55,71,90)] text-white flex items-center justify-center 
-            h-12 text-[0.75rem] font-semiboldc">
+            h-12 text-[0.75rem] font-semibold">
                 {/* footer - back to top banner button */}
                 <p>Back  to top</p>
             </div>
             <div className="[&_h1]:font-semibold flex flex-wrap items-center md:items-start justify-center [&_li]:text-sm [&_li]:p-1 
             [&_ul]:px-10 [&_ul]:py-4 lg:[&_ul]:py-12 bg-[rgb(34,47,62)] text-gray-100  md:text-left
-            [&_ul]:max-w-[18rem] [&_li]:cursor-pointer">
+            [&_ul]:max-w-[18rem] [&_li]:cursor-pointer hover:[&_li]:underline">
                 {/* footer - company info */}
                 <ul>
                     <h1>Get to Know Us</h1>
                     <li>Careers</li>
-                    <li>Amazon Newsletter</li>
-                    <li>About Amazon</li>
+                    <li>LiteLight Newsletter</li>
+                    <li>About LiteLight</li>
                     <li>Sustainability</li>
                     <li>Press Center</li>
                     <li>Investor Relations</li>
-                    <li>Amazon Devices</li>
-                    <li>Amazon Science</li>
+                    <li>LiteLight Devices</li>
+                    <li>LiteLight Science</li>
                 </ul>
                 <ul>
                     <h1>Make Money with Us</h1>
-                    <li>Sell products on Amazon</li>
-                    <li>Supply to Amazon</li>
+                    <li>Sell products on LiteLight</li>
+                    <li>Supply to LiteLight</li>
                     <li>Protect & Build Your Brand</li>
                     <li>Become an Affiliate</li>
                     <li>Become a Delivery Driver</li>
                     <li>Start a package delivery business</li>
                     <li>Advertise Your Products</li>
                     <li>Self-Publish with Us</li>
-                    <li>Host an Amazon Hub</li>
+                    <li>Host an LiteLight Hub</li>
                     <li>See More Ways to Make Money</li>
                 </ul>
                 <ul>
-                    <h1>Amazon Payment Products</h1>
-                    <li>Amazon Rewards Visa Signature Cards</li>
-                    <li>Amazon Store Card</li>
-                    <li>Amazon Secured Card</li>
-                    <li>Amazon Business Card</li>
+                    <h1>LiteLight Payment Products</h1>
+                    <li>LiteLight Rewards Visa Signature Cards</li>
+                    <li>LiteLight Store Card</li>
+                    <li>LiteLight Secured Card</li>
+                    <li>LiteLight Business Card</li>
                     <li>Shop with Points</li>
                     <li>Credit Card Marketplace</li>
                     <li>Reload Your Balance</li>
-                    <li>Amazon Currency Convertyer</li>
+                    <li>LiteLight Currency Convertyer</li>
                 </ul>
                 <ul>
                     <h1>Let Us Help You</h1>
-                    <li>Amazon and COVID-19</li>
+                    <li>LiteLight and COVID-19</li>
                     <li>Your Account</li>
                     <li>Your Orders</li>
                     <li>Shipping Rates Policies</li>
@@ -55,7 +55,7 @@ export default function Footer(){
                     <li>Returns & Replaces</li>
                     <li>Manage Your Content and Devices</li>
                     <li>Your Recalls and Product Safety Alerts</li>
-                    <li>Amazon Assistants</li>
+                    <li>LiteLight Assistants</li>
                     <li>Help</li>
                 </ul>
             </div>

@@ -1,4 +1,5 @@
-import MainSection from "./components/MainSection"
+import FourSetContentBlock from "./components/FourSetContentBlock"
+import SingleSetContentBlock from "./components/SingeSetContentBlock"
 
 import lighters from './lighters.json'
 import recs from './recommendations.json'
@@ -62,15 +63,15 @@ export default function Main(){
                 className="flex flex-col md:grid grid-cols-2 lg:grid-cols-4 md:gap-5 
                 lg:-mt-[26.05rem] md:px-5">
                     {/* main - content block - 4 lighters per block  */}
-                    {/* <MainSection lighter= */}
-                    <MainSection lighter={lighters.bic} />
-                    <MainSection lighter={lighters.zippo} />
-                    <MainSection lighter={lighters.colibri} />
+                    {/* <FourSetContentBlock lighter= */}
+                    <FourSetContentBlock lighter={lighters.bic} />
+                    <FourSetContentBlock lighter={lighters.zippo} />
+                    <FourSetContentBlock lighter={lighters.colibri} />
 
 
                     <section 
                     className="flex flex-col h-[25.2rem] md:h-[26.2rem] items-center justify-between text-gray-900">
-                    {/* main - easy returns & rewards - larger screens only */}
+                    {/* main - easy returns & visa add - larger screens only */}
                         <div 
                         className=" h-[9.4rem] w-full bg-white flex flex-col justify-between p-4 px-5 pb-[1.4rem] pr-10">
                             <h1
@@ -87,7 +88,7 @@ export default function Main(){
                             </p>
                         </div>
 
-                        {/* VISA */}
+                        {/* visa */}
                         <div
                         className="bg-[url(https://www.gannett-cdn.com/presto/2021/08/17/USAT/d396978a-8f42-4c6a-8630-00e3d1a540b4-2021_06_04_DEALS_ChaseCC.png?crop=2987,1681,x12,y0&width=2987&height=1681&format=pjpg&auto=webp)]
                         h-[15.6rem] w-full lg:max-w-[18.5rem] lg:min-w-[1.5rem] lg:w-full bg-cover bg-center border border-gray-500 p-4 pt-3 flex flex-col 
@@ -114,7 +115,8 @@ export default function Main(){
                     </section>
 
 
-                    <MainSection lighter={lighters.lotus} />
+                    <FourSetContentBlock lighter={lighters.lotus} />
+                    <SingleSetContentBlock lighter={lighters.colibri} />
 
                     <section></section>
                     <section></section>
