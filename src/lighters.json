@@ -62,5 +62,38 @@
       "https://i.ytimg.com/vi/BITUeazuBZk/maxresdefault.jpg",
       "https://i.ytimg.com/vi/dz3tQye3Ps4/maxresdefault.jpg"
     ]  
+  },
+  "ronson" : {
+    "brand" : "Ronson",
+    "name" : [
+      "Lot-Art Gold"
+    ],
+    "image" : [
+      "https://static3.lot-art.com/public/upl/48/Two-Ronson-lighters_1622226791_4451.jpg"
+    ]
+  },
+  "clipper" : {
+    "brand" : "Clipper",
+    "name" : [
+      "Battery Pack",
+      "White Out",
+      "Fuel Paint | Chrome Clipper",
+      "Red | Candy Paint"
+    ],
+    "image" : [
+      "https://cdn11.bigcommerce.com/s-q58qsr82ie/images/stencil/728x728/products/1812/4388/CLIPPER-RAW-METAL-LIGHTER__50190.1653528154.jpg?c=1",
+      "https://cdn.shopify.com/s/files/1/0500/0085/5210/products/1064-316482-1290_600x.jpg?v=1603663029",
+      "https://www.shopmaryjae.com/wp-content/uploads/2020/06/clipper_lighter.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2UzrYAg0bY2v9HF30lUMsH4pGNBXUm5YMHg&usqp=CAU"
+    ]
+  },
+  "mk" : {
+    "brand" : "MK",
+    "name" : [
+      "Coast Gold"
+    ],
+    "image" : [
+      "https://www.mklighter.com/wp-content/uploads/2020/11/A9-900.jpg"
+    ]
   }
 }

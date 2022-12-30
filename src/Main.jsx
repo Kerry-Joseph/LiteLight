@@ -70,11 +70,10 @@ export default function Main(){
                     <FourSetContentBlock lighter={lighters.colibri} />
                     <ReturnsAndVisaAd />
                     <FourSetContentBlock lighter={lighters.lotus} />
-                    <SingleSetContentBlock lighter={lighters.colibri} />
-                    <FourSetContentBlock lighter={lighters.lotus} />
-                    <SingleSetContentBlock lighter={lighters.colibri} />
+                    <SingleSetContentBlock lighter={lighters.ronson} />
+                    <FourSetContentBlock lighter={lighters.clipper} />
+                    <SingleSetContentBlock lighter={lighters.mk} />
                     <FullWidthContentBlock />
-                    
                 </div>
             </main>
         </main>
