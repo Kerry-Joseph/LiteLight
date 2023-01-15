@@ -16,15 +16,17 @@ const router = Router()
 
 // REGISTER
 router.post('/register', registerValidationChain, async(req, res) => {
-  const { email, password, first_name, last_name } = req.body
+  const { email, password, first_name, last_name, city, state} = req.body
   try {
     const hashedPassword = await hash(password, 10)
 
-    await db.query('insert into users(email, password, first_name, last_name) values ($1, $2, $3, $4)', [
+    await db.query('insert into users(email, password, first_name, last_name, city, state) values ($1, $2, $3, $4, $5, $6)', [
       email,
       hashedPassword,
       first_name,
-      last_name
+      last_name,
+      city,
+      state
     ])
 
     res.status(201).json({
