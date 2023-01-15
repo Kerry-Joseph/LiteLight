@@ -5,6 +5,8 @@ const { Strategy } = require('passport-jwt')
 const db = require('./db')
 const { SECRET } = require('./enviornment_variables')
 
+
+// REGISTER --
 const validEmailCheck = check('email').isEmail().withMessage('Please provide avalid email.')
 
 const existingEmailCheck = check('email').custom( async(value) => {
@@ -29,6 +31,8 @@ const validationErrorCheck = (req, res, next) => {
   next()
 }
 
+
+// LOGIN --
 const loginValidation = check('email').custom( async(value, { req }) => {
   const user = await db.query('SELECT * from users WHERE email = $1', [ value ])
 
@@ -46,6 +50,7 @@ const loginValidation = check('email').custom( async(value, { req }) => {
 })
 
 
+// PASSPORT --
 const token = (req) => {
   return req && req.cookies ? req.cookies['token'] : undefined
 }

@@ -1,4 +1,9 @@
-const { registerValidationChain, loginValidationChain, tokenPassportCheck } = require('./validation')
+const { 
+  registerValidationChain, 
+  loginValidationChain, 
+  tokenPassportCheck 
+} = require('./validation_middleware')
+
 const { hash } = require('bcryptjs')
 const { sign } = require('jsonwebtoken')
 const db = require('./db')
@@ -80,7 +85,7 @@ router.get('/logout', (req, res) => {
 })
 
 
-// TOKEN PASSPORT CHECK
+// TOKEN PASSPORT
 router.get('/passport', tokenPassportCheck, (req, res) => {
   try {
     return res.status(200).json(req.user)
@@ -91,7 +96,5 @@ router.get('/passport', tokenPassportCheck, (req, res) => {
     })
   }
 })
-
-
 
 module.exports = router
