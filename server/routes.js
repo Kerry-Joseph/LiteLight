@@ -8,6 +8,7 @@ const { SECRET } = require('./enviornment_variables')
 const { Router } = require('express')
 const router = Router()
 
+// REGISTER
 router.post('/register', registerValidationChain, async(req, res) => {
   const { email, password, first_name, last_name } = req.body
   try {
@@ -32,7 +33,7 @@ router.post('/register', registerValidationChain, async(req, res) => {
   }
 })
 
-
+// LOGIN
 router.post('/login', loginValidationChain, (req, res) => {
   let user = req.user
 
@@ -57,6 +58,23 @@ router.post('/login', loginValidationChain, (req, res) => {
     })
   }
 
+})
+
+
+// LOGOUT
+router.get('/logout', (req, res) => {
+  try {
+    res.clearCookie('token')
+    return res.status(200).json({
+      success: true,
+      message: 'logout successful'
+    })
+  } catch (err) {
+    console.log(err.message)
+    return res.status(500).json({
+      error: err.message
+    })
+  }
 })
 
 module.exports = router
