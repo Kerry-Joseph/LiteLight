@@ -1,3 +1,4 @@
+const { compare } = require('bcryptjs')
 const { check, validationResult } = require('express-validator')
 const db = require('./db')
 
@@ -25,7 +26,24 @@ const validationErrorCheck = (req, res, next) => {
   next()
 }
 
+const loginValidation = check('email').custom( async(value, { req }) => {
+  const user = await db.query('SELECT * from users WHERE email = $1', [ value ])
+
+  if(!user.rows.length){
+    throw new Error('Invalid Credentials')
+  }
+
+  const loginPasswordCheck = await compare(req.body.password, user.rows[0].password) 
+
+  if(!loginPasswordCheck){
+    throw new Error('Invalid Credentials')
+  }
+
+  req.user = user.rows[0]
+})
+
 
 module.exports = {
-  validationChain: [validEmailCheck, existingEmailCheck, passwordCheck, validationErrorCheck]
+  registerValidationChain: [validEmailCheck, existingEmailCheck, passwordCheck, validationErrorCheck],
+  loginValidationChain: [loginValidation, validationErrorCheck]
 }

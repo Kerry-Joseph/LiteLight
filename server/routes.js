@@ -1,11 +1,14 @@
-const { validationChain } = require('./validation')
+const { registerValidationChain, loginValidationChain } = require('./validation')
 const { hash } = require('bcryptjs')
+const { sign } = require('jsonwebtoken')
 const db = require('./db')
+
+const { SECRET } = require('./enviornment_variables')
 
 const { Router } = require('express')
 const router = Router()
 
-router.post('/register', validationChain, async(req, res) => {
+router.post('/register', registerValidationChain, async(req, res) => {
   const { email, password, first_name, last_name } = req.body
   try {
     const hashedPassword = await hash(password, 10)
@@ -27,6 +30,33 @@ router.post('/register', validationChain, async(req, res) => {
       error: err.message
     })
   }
+})
+
+
+router.post('/login', loginValidationChain, (req, res) => {
+  let user = req.user
+
+  let payload = {
+    id: user.id,
+    email: user.email
+  }
+
+  try {
+    const token = sign(payload, SECRET)
+
+    res.cookie('token', token)
+
+    return res.status(201).json({
+      success: true,
+      message: 'login successful'
+    })
+  } catch (err) {
+    console.log(err.message)
+    return res.status(500).json({
+      error: err.message
+    })
+  }
+
 })
 
 module.exports = router
