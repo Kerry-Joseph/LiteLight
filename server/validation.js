@@ -55,7 +55,7 @@ const jwtOptions = {
   jwtFromRequest: token
 }
 
-const jwtPassportStrategy = passport.use (
+passport.use (
   new Strategy(jwtOptions, async({ id }, done) => {
     try {
       const { rows } = await db.query('SELECT id, email, first_name, last_name, city, state FROM users WHERE id = $1',
@@ -73,6 +73,9 @@ const jwtPassportStrategy = passport.use (
         city: rows[0].city,
         state: rows[0].state,
       }
+
+      return done(null, user)
+      
     } catch (err) {
       console.log(err.message)
       done(err.message, false)
@@ -86,5 +89,5 @@ const passportAuth = passport.authenticate('jwt', { session: false })
 module.exports = {
   registerValidationChain: [validEmailCheck, existingEmailCheck, passwordCheck, validationErrorCheck],
   loginValidationChain: [loginValidation, validationErrorCheck],
-  tokenPassportCheck: [jwtPassportStrategy, passportAuth]
+  tokenPassportCheck: passportAuth
 }

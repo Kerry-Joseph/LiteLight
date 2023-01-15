@@ -1,4 +1,4 @@
-const { registerValidationChain, loginValidationChain } = require('./validation')
+const { registerValidationChain, loginValidationChain, tokenPassportCheck } = require('./validation')
 const { hash } = require('bcryptjs')
 const { sign } = require('jsonwebtoken')
 const db = require('./db')
@@ -7,6 +7,7 @@ const { SECRET } = require('./enviornment_variables')
 
 const { Router } = require('express')
 const router = Router()
+
 
 // REGISTER
 router.post('/register', registerValidationChain, async(req, res) => {
@@ -32,6 +33,7 @@ router.post('/register', registerValidationChain, async(req, res) => {
     })
   }
 })
+
 
 // LOGIN
 router.post('/login', loginValidationChain, (req, res) => {
@@ -76,5 +78,20 @@ router.get('/logout', (req, res) => {
     })
   }
 })
+
+
+// TOKEN PASSPORT CHECK
+router.get('/passport', tokenPassportCheck, (req, res) => {
+  try {
+    return res.status(200).json(req.user)
+  } catch (err) {
+    console.log(err.message)
+    return res.status(500).json({
+      error: err.message
+    })
+  }
+})
+
+
 
 module.exports = router
