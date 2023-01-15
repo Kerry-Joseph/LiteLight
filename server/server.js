@@ -11,6 +11,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(morgan('dev'))
 app.use(cors())
+app.use(passport.initialize())
 
 
 const routes = require('./routes')
