@@ -54,11 +54,10 @@ router.post('/login', loginValidationChain, (req, res) => {
   try {
     const token = sign(payload, SECRET)
 
-    res.cookie('token', token)
-
-    return res.status(201).json({
+    return res.status(200).cookie('token', token).json({
       success: true,
-      message: 'login successful'
+      message: 'login successful',
+     
     })
   } catch (err) {
     console.log(err.message)
