@@ -1,6 +1,6 @@
-import Nav from './Nav';
-import Main from './Main';
-import Footer from './Footer';
+import Nav from './components/main_sections/Nav';
+import Main from './components/main_sections/Main';
+import Footer from './components/main_sections/Footer';
 
 
 function App() {
@@ -8,9 +8,7 @@ function App() {
     <div className="App overflow-x-hidden font-raleway">
       <Nav />
       <Main />
-      
       <Footer />
-     
     </div>
   );
 }

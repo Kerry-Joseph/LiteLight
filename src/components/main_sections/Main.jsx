@@ -1,12 +1,12 @@
-import FourSetContentBlock from "./components/FourSetContentBlock"
-import SingleSetContentBlock from "./components/SingeSetContentBlock"
-import FullWidthContentBlock from "./components/FullWidthContentBlock"
-import ReturnsAndVisaAd from "./components/ReturnsAndVisaAd"
+import FourSetContentBlock from "../FourSetContentBlock"
+import SingleSetContentBlock from "../SingeSetContentBlock"
+import FullWidthContentBlock from "../FullWidthContentBlock"
+import ReturnsAndVisaAd from "../ReturnsAndVisaAd"
 
-import lighters from './lighters.json'
-import recs from './recommendations.json'
+import lighters from '../../lighters.json'
+import recs from '../../recommendations.json'
 
-import Banner from "./components/Banner"
+import Banner from "../Banner"
 
 export default function Main(){
 
@@ -14,7 +14,7 @@ export default function Main(){
     const MobileRecs = () => (
         recs.map(rec => {
             return (
-                <div className="flex flex-col justify-between">
+                <div className="flex flex-col justify-between" key={rec.id}>
                     <h1 className="pt-1.5 px-2">
                         {rec.title}
                     </h1>
