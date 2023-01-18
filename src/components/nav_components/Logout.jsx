@@ -2,9 +2,12 @@ export default function Logout() {
 
 
   const logout = () => {
-    localStorage.clear()
+    document.cookie = 'token=""'
     window.location.reload()
   }
+
+  console.log(document.cookie)
+
 
 
   return (

@@ -19,11 +19,12 @@ export default function Register() {
 
     const handleChange = e => {
       SetFormState(prev => ({
-        ...prev, [e.target.id]: e.target.value
+        ...prev, [e.target.name]: e.target.value
       }))
     }
     
 
+  
     const { REACT_APP_REGISTER_API } = process.env
     
 
@@ -56,7 +57,18 @@ export default function Register() {
       createUser()
     }
 
-  
+
+    
+    const passwordIdenticalCheck = () => {
+      const password = document.querySelector("#register_password")
+      const confirmPassword = document.getElementById("confirm_password")
+      if(password.value !== confirmPassword.value) {
+        confirmPassword.setCustomValidity("Passwords do no match.")
+      } else {
+        confirmPassword.setCustomValidity('')
+      }
+    }
+
     return (
       <form onSubmit={handleSubmit} className="flex flex-col">
         <label htmlFor="first_name">First Name</label>
@@ -69,10 +81,10 @@ export default function Register() {
         <input type="text" name="email" id="register_email" onChange={handleChange} required/>
 
         <label htmlFor="password">Create Password</label>
-        <input type="password" name="password" id="register_password" onChange={handleChange} required/>
+        <input type="password" name="password" id="register_password" onChange={(e) => {passwordIdenticalCheck(); handleChange(e)}} required/>
 
         <label htmlFor="password">Confirm Password</label>
-        <input type="password" name="confirm_password" id="confirm_password" />
+        <input type="password" name="confirm_password" id="confirm_password"  onChange={(e) => {passwordIdenticalCheck(); handleChange(e)}} required/>
 
         <input type="submit" />
       </form>

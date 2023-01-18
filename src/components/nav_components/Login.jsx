@@ -15,15 +15,14 @@ export default function Login() {
     
     const handleChange = e => {
       SetFormState(prev => ({
-        ...prev, [e.target.id]: e.target.value
+        ...prev, [e.target.name]: e.target.value
       }))
     }
     
-    
     const { REACT_APP_LOGIN_API } = process.env
     
-
     const loginUser = () => {
+
       axios.post(REACT_APP_LOGIN_API, {
         email: formState.email,
         password: formState.password
@@ -38,19 +37,20 @@ export default function Login() {
         }
         document.cookie = `token=${res.data}; expires=${(sinceEpoch + daysInMiliseconds(60)) }`
       })
+      .then(() => {
+        window.location.reload()
+      })
       .catch(err => {
-        console.log({
-          success: false,
-          response: err
-        })
+        console.log(err)
       })
     }
     
-    const handleSubmit = e => {
+
+
+    const handleSubmit = async e => {
       e.preventDefault()
-      
+
       loginUser()
-      
     }
     
 

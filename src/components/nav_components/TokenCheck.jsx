@@ -30,7 +30,6 @@ export default function TokenCheck() {
     })
     .catch(err => {
       setAuth(false)
-      console.log(err)
     })
   }, [REACT_APP_PASSPORT_API])
     
