@@ -66,10 +66,10 @@ export default function Register() {
         <input type="text" name="last_name" id="last_name" onChange={handleChange} required/>
 
         <label htmlFor="email">email</label>
-        <input type="text" name="email" id="email" onChange={handleChange} required/>
+        <input type="text" name="email" id="register_email" onChange={handleChange} required/>
 
         <label htmlFor="password">Create Password</label>
-        <input type="password" name="password" id="password" onChange={handleChange} required/>
+        <input type="password" name="password" id="register_password" onChange={handleChange} required/>
 
         <label htmlFor="password">Confirm Password</label>
         <input type="password" name="confirm_password" id="confirm_password" />

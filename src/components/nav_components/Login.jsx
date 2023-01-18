@@ -31,7 +31,12 @@ export default function Login() {
       .then(res => {
         console.log (res.data)
         setFormSubmitted(true)
-        window.localStorage.setItem('token', res.data)
+        const currentTime = new Date()
+        const sinceEpoch = currentTime.getTime()
+        const daysInMiliseconds = (days) => {
+          return 1000 * 60 * 60 * 24 * days
+        }
+        document.cookie = `token=${res.data}; expires=${(sinceEpoch + daysInMiliseconds(60)) }`
       })
       .catch(err => {
         console.log({
@@ -40,8 +45,7 @@ export default function Login() {
         })
       })
     }
-    console.log(localStorage.token)
-
+    
     const handleSubmit = e => {
       e.preventDefault()
       
@@ -53,10 +57,10 @@ export default function Login() {
     return (
       <form onSubmit={handleSubmit} className="flex flex-col">
         <label htmlFor="email">email</label>
-        <input type="text" name="email" id="email" onChange={handleChange} required/>
+        <input type="text" name="email" id="login_email" onChange={handleChange} required/>
 
         <label htmlFor="password">Enter Password</label>
-        <input type="password" name="password" id="password" onChange={handleChange} required/>
+        <input type="password" name="password" id="login_password" onChange={handleChange} required/>
 
         <input type="submit" />
       </form>

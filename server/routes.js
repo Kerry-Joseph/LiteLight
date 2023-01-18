@@ -85,7 +85,7 @@ router.get('/logout', (req, res) => {
 
 
 // TOKEN PASSPORT
-router.get('/passport', tokenPassportCheck, (req, res) => {
+router.post('/passport', tokenPassportCheck, (req, res) => {
   try {
     return res.status(200).json(req.user)
   } catch (err) {

@@ -52,8 +52,9 @@ const loginValidation = check('email').custom( async(value, { req }) => {
 
 // PASSPORT --
 const token = (req) => {
-  return req && req.localStorage ? req.localStorage.token : undefined
+  return req && req.body ? req.body.token : undefined
 }
+
 
 const jwtOptions = {
   secretOrKey: SECRET,
