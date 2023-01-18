@@ -39,6 +39,7 @@ export default function Register() {
           success: true,
           response: res
         })
+        setFormSubmitted(true)
       })
       .catch(err => {
         console.log({
@@ -53,8 +54,6 @@ export default function Register() {
       e.preventDefault()
       
       createUser()
-      
-      setFormSubmitted(true)
     }
 
   

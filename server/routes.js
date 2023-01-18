@@ -16,7 +16,7 @@ const router = Router()
 
 // REGISTER
 router.post('/register', registerValidationChain, async(req, res) => {
-  const { email, password, first_name, last_name, city, state} = req.body
+  const { email, password, first_name, last_name, city, state } = req.body
   try {
     const hashedPassword = await hash(password, 10)
 
@@ -44,6 +44,7 @@ router.post('/register', registerValidationChain, async(req, res) => {
 
 // LOGIN
 router.post('/login', loginValidationChain, (req, res) => {
+
   let user = req.user
 
   let payload = {
@@ -52,13 +53,11 @@ router.post('/login', loginValidationChain, (req, res) => {
   }
 
   try {
+
     const token = sign(payload, SECRET)
 
-    return res.status(200).cookie('token', token).json({
-      success: true,
-      message: 'login successful',
-     
-    })
+    return res.status(200).json(token)
+
   } catch (err) {
     console.log(err.message)
     return res.status(500).json({
@@ -72,7 +71,6 @@ router.post('/login', loginValidationChain, (req, res) => {
 // LOGOUT
 router.get('/logout', (req, res) => {
   try {
-    res.clearCookie('token')
     return res.status(200).json({
       success: true,
       message: 'logout successful'

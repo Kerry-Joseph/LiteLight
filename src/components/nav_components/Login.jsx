@@ -29,7 +29,9 @@ export default function Login() {
         password: formState.password
       })
       .then(res => {
-        console.log (res)
+        console.log (res.data)
+        setFormSubmitted(true)
+        window.localStorage.setItem('token', res.data)
       })
       .catch(err => {
         console.log({
@@ -38,14 +40,13 @@ export default function Login() {
         })
       })
     }
-    
+    console.log(localStorage.token)
 
     const handleSubmit = e => {
       e.preventDefault()
       
       loginUser()
       
-      setFormSubmitted(true)
     }
     
 

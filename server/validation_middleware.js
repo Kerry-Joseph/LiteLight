@@ -52,7 +52,7 @@ const loginValidation = check('email').custom( async(value, { req }) => {
 
 // PASSPORT --
 const token = (req) => {
-  return req && req.cookies ? req.cookies['token'] : undefined
+  return req && req.localStorage ? req.localStorage.token : undefined
 }
 
 const jwtOptions = {
