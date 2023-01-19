@@ -36,17 +36,11 @@ export default function Register() {
         password: formState.password
       })
       .then(res => {
-        console.log ({
-          success: true,
-          response: res
-        })
+        console.log (res)
         setFormSubmitted(true)
       })
       .catch(err => {
-        console.log({
-          success: false,
-          response: err
-        })
+        console.log(err)
       })
     }
     
@@ -106,7 +100,7 @@ export default function Register() {
 
 
   return (
-    <div className="absolute top-20 left-40 z-20 bg-red-400 hidden">
+    <div className="absolute top-20 left-40 z-20 bg-red-400">
       {!formSubmitted ? <RegisterForm /> : <RegisterFormSubmitted />}
     </div>
   )

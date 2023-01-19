@@ -1,60 +1,64 @@
 import axios from "axios"
 import { useState } from "react"
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 
 export default function Login() {
   
+ 
+  const [formState, SetFormState] = useState({
+    email: '',
+    password: ''
+  })
   
-  const [formSubmitted, setFormSubmitted] = useState(false)
+  const handleChange = e => {
+    SetFormState(prev => ({
+      ...prev, [e.target.name]: e.target.value
+    }))
+  }
   
+  const { REACT_APP_LOGIN_API } = process.env
   
-  function LoginForm() {
-    const [formState, SetFormState] = useState({
-      email: '',
-      password: ''
+  const loginUser = () => {
+
+    axios.post(REACT_APP_LOGIN_API, {
+      email: formState.email,
+      password: formState.password
     })
-    
-    const handleChange = e => {
-      SetFormState(prev => ({
-        ...prev, [e.target.name]: e.target.value
-      }))
-    }
-    
-    const { REACT_APP_LOGIN_API } = process.env
-    
-    const loginUser = () => {
+    .then(res => {
+      console.log (res.data)
+      const currentTime = new Date()
+      const sinceEpoch = currentTime.getTime()
+      const daysInMiliseconds = (days) => {
+        return 1000 * 60 * 60 * 24 * days
+      }
+      document.cookie = `token=${res.data}; expires=${(sinceEpoch + daysInMiliseconds(60)) }`
+    })
+    .then(() => {
+      window.location.href = 'http://localhost:3000'
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }
 
-      axios.post(REACT_APP_LOGIN_API, {
-        email: formState.email,
-        password: formState.password
-      })
-      .then(res => {
-        console.log (res.data)
-        setFormSubmitted(true)
-        const currentTime = new Date()
-        const sinceEpoch = currentTime.getTime()
-        const daysInMiliseconds = (days) => {
-          return 1000 * 60 * 60 * 24 * days
-        }
-        document.cookie = `token=${res.data}; expires=${(sinceEpoch + daysInMiliseconds(60)) }`
-      })
-      .then(() => {
-        window.location.reload()
-      })
-      .catch(err => {
-        console.log(err)
-      })
-    }
-    
 
-    const handleSubmit = async e => {
-      e.preventDefault()
+  const handleSubmit = async e => {
+    e.preventDefault()
 
-      loginUser()
-    }
-    
+    loginUser()
+  }
+  
 
-    return (
+  const getToken = () => {
+    const cookie = document.cookie.split('=')
+    const tokenIndex = cookie.findIndex(() => 'token') + 1
+    return cookie[tokenIndex]
+  }
+
+  
+
+  return (
+    <div className="absolute top-[8.5rem] z-20 md:top-[3.5rem] md:right-0 lg:right-[11rem]">
       <form onSubmit={handleSubmit} 
       className="flex flex-col w-screen bg-green-800 md:w-[20rem] md:rounded-b-md md:border-b md:border-l md:bg-green-900 
       lg:border-r lg:rounded-b-md">
@@ -82,22 +86,7 @@ export default function Login() {
           </Link>
         </div>
       </form>
-    )
-  }
-
-
-  
-  function RegisterFormSubmitted() {
-    return (
-      <>USER CREATED</>
-    )
-  }
-
-
-
-  return (
-    <div className="absolute top-[6.2rem] z-20 md:top-[3.5rem] md:right-0 lg:right-[11rem]">
-      {!formSubmitted ? <LoginForm /> : <RegisterFormSubmitted />}
+      {getToken() === "" || undefined ? false : <Navigate to="/" />}
     </div>
   )
 }
