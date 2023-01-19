@@ -1,4 +1,8 @@
+import { Link, useLocation } from 'react-router-dom'
+
+
 export default function Search() {
+  
   return (
     <div 
     className="flex justify-center py-1 md:bg-green-900">
@@ -79,7 +83,7 @@ export default function Search() {
 
 
 
-        <div className="hidden md:flex relative text-white min-w-max ml-1 mr-1 border border-transparent hover:border-white 
+        <Link to={useLocation().pathname === '/login' ? "/" : "/login"} className="hidden md:flex relative text-white min-w-max ml-1 mr-1 border border-transparent hover:border-white 
         rounded-sm pl-2 pr-6 justify-end flex-col cursor-pointer">
             {/* accounts and lists */}
             <p 
@@ -89,7 +93,7 @@ export default function Search() {
             </p>
             <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/arrow-small-down-512.png" alt="down arrow" 
             className="h-7 absolute -right-0.5 top-4.5"/>
-        </div>
+        </Link>
 
 
        

@@ -92,6 +92,8 @@ export default function Register() {
   }
 
 
+
+
   
   function RegisterFormSubmitted() {
     return (
@@ -101,8 +103,10 @@ export default function Register() {
 
 
 
+
+
   return (
-    <div className="absolute top-20 left-40 z-20 bg-red-400">
+    <div className="absolute top-20 left-40 z-20 bg-red-400 hidden">
       {!formSubmitted ? <RegisterForm /> : <RegisterFormSubmitted />}
     </div>
   )

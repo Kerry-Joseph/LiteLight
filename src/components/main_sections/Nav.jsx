@@ -6,15 +6,25 @@ import Register from '../nav_components/Register'
 import Login from '../nav_components/Login'
 import Logout from '../nav_components/Logout'
 import TokenCheck from '../nav_components/TokenCheck'
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from 'react-router-dom'
 
 export default function Nav(){
 
     return (
         <nav className="bg-green-800 ">
-            <TokenCheck />
-            <Logout />
-            <Login />
-            <Register />
+          <Router>
+            
+            <Routes>
+              <Route path='/login' element={<Login />} />
+              <Route path='/register' element={<Register />} />
+              <Route path='/logout' element={<Logout />} />
+              <Route path='/token' element={<TokenCheck />} />
+            </Routes>
+
             {/* nav - search */}
             <Search />
             {/* nav - catagories */}
@@ -23,6 +33,12 @@ export default function Nav(){
             <DeliveryBanner />
             {/* nav - navigation button - bottom of screen - mobile only */}
             <BottomMobileNav />
+
+          </Router>
+            
+            
+            
+            
         </nav>
     )
 }

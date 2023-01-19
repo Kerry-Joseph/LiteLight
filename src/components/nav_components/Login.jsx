@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
+import { Link } from 'react-router-dom'
 
 export default function Login() {
   
@@ -46,7 +47,6 @@ export default function Login() {
     }
     
 
-
     const handleSubmit = async e => {
       e.preventDefault()
 
@@ -55,14 +55,32 @@ export default function Login() {
     
 
     return (
-      <form onSubmit={handleSubmit} className="flex flex-col">
-        <label htmlFor="email">email</label>
-        <input type="text" name="email" id="login_email" onChange={handleChange} required/>
+      <form onSubmit={handleSubmit} 
+      className="flex flex-col w-screen bg-green-800 md:w-[20rem] md:rounded-b-md md:border-b md:border-l md:bg-green-900 
+      lg:border-r lg:rounded-b-md">
+        <label htmlFor="email" className="p-2 font-semibold text-white">
+          Enter Email
+        </label>
+        <input type="text" name="email" id="login_email" onChange={handleChange} required
+        className="mx-2 p-2 px-4 rounded-md focus:outline-0 font-medium"/>
 
-        <label htmlFor="password">Enter Password</label>
-        <input type="password" name="password" id="login_password" onChange={handleChange} required/>
+        <label htmlFor="password" className="p-2 font-semibold text-white">
+          Enter Password
+        </label>
+        <input type="password" name="password" id="login_password" onChange={handleChange} required
+        className="mx-2 p-2 px-4 rounded-md focus:outline-0"/>
 
-        <input type="submit" />
+        <div className="bg-green-700 mt-3 pt-3 p-2 grow flex flex-col justify-between md:rounded-bl-md lg:rounded-b-md">
+          <input type="submit" className="font-bold text-xl rounded-md bg-orange-300 hover:bg-orange-400 w-full h-10
+          md:text-lg"/>
+          <p className="text-white text-sm mt-2">
+            Don't have an account?
+          </p>
+          <Link to="/register" className="text-white text-xs font-semibold visited:text-purple-600 underline
+          text-blue-600 w-fit">
+            Create an account
+          </Link>
+        </div>
       </form>
     )
   }
@@ -78,7 +96,7 @@ export default function Login() {
 
 
   return (
-    <div className="absolute top-20 left-[24rem] z-20 bg-red-400">
+    <div className="absolute top-[6.2rem] z-20 md:top-[3.5rem] md:right-0 lg:right-[11rem]">
       {!formSubmitted ? <LoginForm /> : <RegisterFormSubmitted />}
     </div>
   )

@@ -44,7 +44,7 @@ export default function TokenCheck() {
 
 
   return (
-    <h1 className="absolute top-20 left-[50rem] z-20 bg-red-400">
+    <h1 className="absolute top-20 left-[50rem] z-20 bg-red-400 hidden">
       {auth ? 'authorized' : "unathorized"}
     </h1>
   )
