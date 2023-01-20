@@ -6,7 +6,7 @@ const db = require('./db')
 const { SECRET } = require('./enviornment_variables')
 
 
-// REGISTER --
+// REGISTER VALIDATION --
 const validEmailCheck = check('email').isEmail().withMessage('Please provide avalid email.')
 
 const existingEmailCheck = check('email').custom( async(value) => {
@@ -32,7 +32,7 @@ const validationErrorCheck = (req, res, next) => {
 }
 
 
-// LOGIN --
+// LOGIN VALIDATION --
 const loginValidation = check('email').custom( async(value, { req }) => {
   const user = await db.query('SELECT * from users WHERE email = $1', [ value ])
 
@@ -49,8 +49,22 @@ const loginValidation = check('email').custom( async(value, { req }) => {
   req.user = user.rows[0]
 })
 
+// UPDATE PASSWORD VALIDATION --
+const updatePasswordValidation = check('email').custom( async(value, { req }) => {
+  const user = await db.query('SELECT * from users WHERE email = $1', [ value ])
 
-// PASSPORT --
+  const currentPasswordCheck = await compare(req.body.current_password, user.rows[0].password)
+
+  if(!currentPasswordCheck){
+    throw new Error('Invalid Credentials')
+  }
+
+  req.user = user.rows[0]
+})
+
+const newPasswordCheck = check('new_password').isLength({ min: 6, max: 15 }).withMessage('Password must be between 6 - 15 characters.')
+
+// PASSPORT VALIDATION --
 const token = (req) => {
   return req && req.body ? req.body.token : undefined
 }
@@ -95,5 +109,6 @@ const passportAuth = passport.authenticate('jwt', { session: false })
 module.exports = {
   registerValidationChain: [validEmailCheck, existingEmailCheck, passwordCheck, validationErrorCheck],
   loginValidationChain: [loginValidation, validationErrorCheck],
-  tokenPassportCheck: passportAuth
+  tokenPassportCheck: [passportAuth, validationErrorCheck],
+  updatePasswordValidationChain: [updatePasswordValidation, newPasswordCheck, validationErrorCheck]
 }

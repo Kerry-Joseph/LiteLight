@@ -22,9 +22,9 @@ export default function Search({ userInfo }) {
             className="h-4 absolute left-1.5 top-[1.3rem]"/>
             <p 
             className="text-xs font=semibold leading-[.5rem] pb-1.5">
-                { userInfo.name ? userInfo.name.split(' ')[0] : 'Sign-in' }<br/>
+                { userInfo.first_name ? userInfo.first_name : 'Sign-in' }<br/>
                 <span className="text-sm font-bold">
-                  { userInfo.location ? userInfo.location : 'Add Delivery Address'}
+                  { userInfo.city ? `${userInfo.city}, ${userInfo.state}` : 'Add Delivery Address'}
                   
                 </span>
             </p>
@@ -91,7 +91,7 @@ export default function Search({ userInfo }) {
             {/* accounts & lists */}
             <p 
             className="text-xs leading-[.5rem] pb-1.5">
-                { userInfo.name ? userInfo.name : 'Sign-in' }<br/>
+                { userInfo.first_name ? `${userInfo.first_name} ${userInfo.last_name}` : 'Sign-in' }<br/>
                 <span className="text-sm font-bold"> Accounts & Lists</span>
             </p>
             <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/arrow-small-down-512.png" alt="down arrow" 

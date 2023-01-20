@@ -18,14 +18,20 @@ import { useCallback, useEffect, useState } from 'react'
 export default function Nav(){
 
   const [userInfo, setUserInfo] = useState({
-    name: null,
-    location: null
+    id: null,
+    email: null,
+    first_name: null,
+    last_name: null,
+    city: null,
+    state: null
   })
 
+  console.log(userInfo)
   const [authorized, setAuthorized] = useState(false)
 
   const { REACT_APP_PASSPORT_API } = process.env
 
+  // passport function
   const authenticationCheck = useCallback( async() => {
     const getToken = () => {
       const cookie = document.cookie.split('=')
@@ -35,6 +41,7 @@ export default function Nav(){
 
     const token = getToken()
 
+    // promise
     await axios({
       method: 'post',
       url: REACT_APP_PASSPORT_API,
@@ -45,8 +52,12 @@ export default function Nav(){
     .then(res => {
       setAuthorized(true)
       setUserInfo({
-        name: `${res.data.first_name} ${res.data.last_name}`,
-        location: res.data.city ? `${res.data.city}, ${res.data.state}` : null
+        id: res.data.id,
+        email: res.data.email,
+        first_name: res.data.first_name,
+        last_name: res.data.last_name,
+        city: res.data.city,
+        state: res.data.state,
       })
     })
     .catch(() => {

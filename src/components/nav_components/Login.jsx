@@ -54,7 +54,7 @@ export default function Login() {
     const tokenIndex = cookie.findIndex(() => 'token') + 1
     return cookie[tokenIndex]
   }
-
+console.log(getToken())
   
 
   return (
@@ -80,8 +80,8 @@ export default function Login() {
           <p className="text-white text-sm mt-2">
             Don't have an account?
           </p>
-          <Link to="/register" className="text-white text-xs font-semibold visited:text-purple-600 underline
-          text-blue-600 w-fit">
+          <Link to="/register" className="text-white text-xs font-semibold visited:text-purple-800 underline
+          text-blue-800 w-fit font-bold">
             Create an account
           </Link>
         </div>

@@ -120,8 +120,8 @@ export default function Register() {
           <p className="text-white text-sm mt-2">
             Already have an account?
           </p>
-          <Link to="/login" className="text-white text-xs font-semibold visited:text-purple-600 underline
-          text-blue-600 w-fit">
+          <Link to="/login" className="text-white text-xs font-semibold visited:text-purple-800 underline
+          text-blue-800 w-fit">
             Login to your account
           </Link>
         </div>

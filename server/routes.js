@@ -1,7 +1,8 @@
 const { 
   registerValidationChain, 
   loginValidationChain, 
-  tokenPassportCheck 
+  tokenPassportCheck,
+  updatePasswordValidationChain 
 } = require('./validation_middleware')
 
 const { hash } = require('bcryptjs')
@@ -38,6 +39,52 @@ router.post('/register', registerValidationChain, async(req, res) => {
     return res.status(500).json({
       error: err.message
     })
+  }
+})
+
+// UPDATE
+
+router.put('/update-password', updatePasswordValidationChain, async(req, res) => {
+  const { new_password, email } = req.body
+  try {
+    const hashedPassword = await hash(new_password, 10)
+
+    await db.query('UPDATE users SET password = $1 WHERE email = $2', [
+      hashedPassword,
+      email
+    ])
+
+    res.status(200).json({  
+      success: true,
+      message: 'password update successful'
+    })
+  } catch (err) {
+    res.status(400).json({
+      success: false,
+      message: 'password update failed'
+    })
+  }
+})
+
+router.put('/update-info', async(req, res) => {
+  const { id, email , first_name, last_name, city, state } = req.body
+
+  try {
+    await db.query('UPDATE users SET email = $1 first_name = $2, last_name = $3, city = $4, state = $5 WHERE id = $6', [
+      email,
+      first_name,
+      last_name,
+      city,
+      state,
+      id,
+    ])
+
+    res.status(200).json({
+      success: true,
+      message: 'info update successful'
+    })
+  } catch (err) {
+    res.status(400).send(err)
   }
 })
 

@@ -3,10 +3,10 @@ import { Link, useLocation } from "react-router-dom"
 export default function DeliveryBanner({ userInfo }) {
 
   const displayedText = () => {
-    if(userInfo.name && !userInfo.location){
+    if(userInfo.first_name && !userInfo.city){
       return 'Add delivery address'
-    } else if(userInfo.name && userInfo.location){
-      return `${userInfo.name} | ${userInfo.location}` 
+    } else if(userInfo.first_name && userInfo.city){
+      return `${userInfo.first_name}, ${userInfo.last_name} | ${userInfo.city}, ${userInfo.state}` 
     } else {
       return 'Sign-in / Add delivery address'
     }
