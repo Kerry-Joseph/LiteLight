@@ -17,6 +17,11 @@ import { useCallback, useEffect, useState } from 'react'
 
 export default function Nav(){
 
+  const [userInfo, setUserInfo] = useState({
+    name: null,
+    location: null
+  })
+
   const [authorized, setAuthorized] = useState(false)
 
   const { REACT_APP_PASSPORT_API } = process.env
@@ -39,13 +44,17 @@ export default function Nav(){
     })
     .then(res => {
       setAuthorized(true)
+      setUserInfo({
+        name: `${res.data.first_name} ${res.data.last_name}`,
+        location: res.data.city ? `${res.data.city}, ${res.data.state}` : null
+      })
     })
-    .catch(err => {
+    .catch(() => {
       setAuthorized(false)
     })
   }, [ REACT_APP_PASSPORT_API ])
     
-
+  
   useEffect(() => {
     authenticationCheck()
   }, [authenticationCheck])
@@ -64,11 +73,11 @@ export default function Nav(){
 
         { authorized === true ? <Logout /> : false}
         {/* nav - search */}
-        <Search />
+        <Search userInfo = {userInfo}/>
         {/* nav - catagories */}
         <Categories />
         {/* nav - deliver to/sign in - mobile only */}
-        <DeliveryBanner />
+        <DeliveryBanner userInfo = {userInfo}/>
         {/* nav - navigation button - bottom of screen - mobile only */}
         <BottomMobileNav />
 

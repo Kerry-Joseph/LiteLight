@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 
 
-export default function Search() {
+export default function Search({ userInfo }) {
   
   return (
     <div 
@@ -17,13 +17,16 @@ export default function Search() {
 
         <div className="hidden lg:flex relative text-white min-w-max ml-1 mr-5 border border-transparent hover:border-white 
         rounded-sm pl-6 pr-2  justify-end flex-col cursor-pointer">
-            {/* devliver to */}
+            {/* add delivery address */}
             <img src="https://cdn-icons-png.flaticon.com/512/16/16199.png" alt="map dropper" 
             className="h-4 absolute left-1.5 top-[1.3rem]"/>
             <p 
-            className="text-xs leading-[.5rem] pb-1.5">
-                Sign-in<br/>
-                <span className="text-sm font-bold">Add Delivery Address</span>
+            className="text-xs font=semibold leading-[.5rem] pb-1.5">
+                { userInfo.name ? userInfo.name.split(' ')[0] : 'Sign-in' }<br/>
+                <span className="text-sm font-bold">
+                  { userInfo.location ? userInfo.location : 'Add Delivery Address'}
+                  
+                </span>
             </p>
         </div>
 
@@ -85,10 +88,10 @@ export default function Search() {
 
         <Link to={useLocation().pathname === '/login' ? "/" : "/login"} className="hidden md:flex relative text-white min-w-max ml-1 mr-1 border border-transparent hover:border-white 
         rounded-sm pl-2 pr-6 justify-end flex-col cursor-pointer">
-            {/* accounts and lists */}
+            {/* accounts & lists */}
             <p 
             className="text-xs leading-[.5rem] pb-1.5">
-                Sign-in<br/>
+                { userInfo.name ? userInfo.name : 'Sign-in' }<br/>
                 <span className="text-sm font-bold"> Accounts & Lists</span>
             </p>
             <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/arrow-small-down-512.png" alt="down arrow" 

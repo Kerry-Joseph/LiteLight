@@ -72,7 +72,7 @@ export default function Login() {
           Enter Password
         </label>
         <input type="password" name="password" id="login_password" onChange={handleChange} required
-        className="mx-2 p-2 px-4 rounded-md focus:outline-0"/>
+        className="mx-2 p-2 px-4 rounded-md focus:outline-0 font-medium"/>
 
         <div className="bg-green-700 mt-3 pt-3 p-2 grow flex flex-col justify-between md:rounded-bl-md lg:rounded-b-md">
           <input type="submit" className="font-bold text-xl rounded-md bg-orange-300 hover:bg-orange-400 w-full h-10
@@ -86,7 +86,7 @@ export default function Login() {
           </Link>
         </div>
       </form>
-      {getToken() === "" || undefined ? false : <Navigate to="/" />}
+      {getToken() === "" || getToken() === undefined ? false : <Navigate to="/" />}
     </div>
   )
 }
