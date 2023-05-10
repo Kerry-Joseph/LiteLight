@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 
-export default function Logout() {
+export default function Logout({ authorized }) {
   const logout = () => {
     document.cookie = "token="
     window.location.reload()
@@ -21,6 +21,7 @@ export default function Logout() {
           md:text-lg"/>
         </div>
       </form>
+      {authorized ? false : <Navigate to="/" />}
     </div>
   )
 }

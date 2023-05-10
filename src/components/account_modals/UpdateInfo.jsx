@@ -1,8 +1,8 @@
 import axios from "axios"
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
  
-export default function UpdateInfo({ userInfo }) {
+export default function UpdateInfo({ userInfo, authorized }) {
 
   const [formState, SetFormState] = useState({
     first_name: '',
@@ -84,6 +84,7 @@ export default function UpdateInfo({ userInfo }) {
           </Link>
         </div>
       </form>
+      {authorized ? false : <Navigate to="/" />}
     </div>
   )
 }

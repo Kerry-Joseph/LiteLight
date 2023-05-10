@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
   
@@ -48,13 +48,6 @@ export default function Login() {
   }
   
 
-  const getToken = () => {
-    const cookie = document.cookie.split('=')
-    const tokenIndex = cookie.findIndex(() => 'token') + 1
-    return cookie[tokenIndex]
-  }
-  
-
   return (
     <div className="absolute top-[8.5rem] z-20 md:top-[3.5rem] md:right-0 lg:right-[11rem]">
       <form onSubmit={handleSubmit} 
@@ -84,7 +77,6 @@ export default function Login() {
           </Link>
         </div>
       </form>
-      {getToken() === "" || getToken() === undefined ? false : <Navigate to="/logout" />}
     </div>
   )
 }

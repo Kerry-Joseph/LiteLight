@@ -64,6 +64,7 @@ export default function Nav(){
       setAuthorized(false)
     })
   }, [ REACT_APP_PASSPORT_API ])
+
     
   
   useEffect(() => {
@@ -77,10 +78,15 @@ export default function Nav(){
         <Routes>
           <Route path='/' element={false} />
           <Route path='/login' element={<Login />} />
-          <Route path='/logout' element={<Logout />} />
+          <Route path='/logout' element={<Logout 
+            authorized = {authorized}/>} />
           <Route path='/register' element={<Register />} />
-          <Route path='/update-info' element={<UpdateInfo userInfo={userInfo}/>} />
-          <Route path='/update-password' element={<UpdatePassword userInfo={userInfo}/>} />
+          <Route path='/update-info' element={<UpdateInfo 
+            userInfo={userInfo}
+            authorized = {authorized}/>} />
+          <Route path='/update-password' element={<UpdatePassword 
+            userInfo={userInfo}
+            authorized = {authorized}/>} />
           <Route path='/token' element={<TokenCheck />} />
         </Routes>
 

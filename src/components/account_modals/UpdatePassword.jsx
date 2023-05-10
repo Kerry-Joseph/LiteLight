@@ -1,7 +1,8 @@
 import axios from "axios"
 import { useState } from "react"
+import { Navigate } from "react-router-dom"
  
-export default function UpdatePassword({ userInfo }) {
+export default function UpdatePassword({ userInfo, authorized }) {
 
   const [formState, SetFormState] = useState({
     current_password: '',
@@ -81,6 +82,7 @@ export default function UpdatePassword({ userInfo }) {
           md:text-lg"/>
         </div>
       </form>
+      {authorized ? false : <Navigate to="/" />}
     </div>
   )
 }
