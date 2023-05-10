@@ -75,13 +75,15 @@ export default function Nav(){
         <Routes>
           <Route path='/' element={false} />
           <Route path='/login' element={<Login />} />
+          <Route path='/logout' element={<Logout />} />
           <Route path='/register' element={<Register />} />
           <Route path='/token' element={<TokenCheck />} />
         </Routes>
 
-        { authorized === true ? <Logout /> : false}
         {/* nav - search */}
-        <Search userInfo = {userInfo}/>
+        <Search 
+          userInfo = {userInfo} 
+          authorized = {authorized}/>
         {/* nav - catagories */}
         <Categories />
         {/* nav - deliver to/sign in - mobile only */}

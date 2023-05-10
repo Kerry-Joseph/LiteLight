@@ -8,10 +8,15 @@ export default function Logout() {
 
 
   return (
-    <h1 className="absolute top-[6.3rem] h-8 w-20 right-2 z-20 rounded flex
-    justify-center items-center border text-white bg-green-800 font-medium active:bg-green-700
-    cursor-pointer" onClick={logout}>
-      Logout
-    </h1>
+    <div className="absolute top-[8.5rem] z-20 md:top-[3.5rem] md:right-0 lg:right-[11rem]">
+      <form onSubmit={logout} 
+      className="flex flex-col w-screen bg-green-800 md:w-[20rem] md:rounded-b-md md:border-b md:border-l md:bg-green-900 
+      lg:border-r lg:rounded-b-md">
+        <div className="bg-green-700 mt-3 pt-3 p-2 grow flex flex-col justify-between md:rounded-bl-md lg:rounded-b-md">
+          <input type="submit" value="Logout" className="font-bold text-xl rounded-md bg-orange-300 hover:bg-orange-400 w-full h-10
+          md:text-lg"/>
+        </div>
+      </form>
+    </div>
   )
 }

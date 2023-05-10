@@ -84,7 +84,7 @@ export default function Login() {
           </Link>
         </div>
       </form>
-      {getToken() === "" || getToken() === undefined ? false : <Navigate to="/" />}
+      {getToken() === "" || getToken() === undefined ? false : <Navigate to="/logout" />}
     </div>
   )
 }

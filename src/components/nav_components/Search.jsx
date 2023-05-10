@@ -1,7 +1,16 @@
 import { Link, useLocation } from 'react-router-dom'
 
 
-export default function Search({ userInfo }) {
+export default function Search({ userInfo, authorized }) {
+
+  const loginOrLogout = () => {
+    if(authorized){
+      return "/logout"
+    } else {
+      return "/login"
+    }
+  }
+
   
   return (
     <div 
@@ -86,7 +95,7 @@ export default function Search({ userInfo }) {
 
 
 
-        <Link to={useLocation().pathname === '/login' ? "/" : "/login"} className="hidden md:flex relative text-white min-w-max ml-1 mr-1 border border-transparent hover:border-white 
+        <Link to={useLocation().pathname === loginOrLogout() ? "/" : loginOrLogout()} className="hidden md:flex relative text-white min-w-max ml-1 mr-1 border border-transparent hover:border-white 
         rounded-sm pl-2 pr-6 justify-end flex-col cursor-pointer">
             {/* accounts & lists */}
             <p 
