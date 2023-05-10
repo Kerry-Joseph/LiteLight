@@ -87,7 +87,9 @@ export default function Nav(){
         {/* nav - catagories */}
         <Categories />
         {/* nav - deliver to/sign in - mobile only */}
-        <DeliveryBanner userInfo = {userInfo}/>
+        <DeliveryBanner 
+          userInfo = {userInfo} 
+          authorized = {authorized}/>
         {/* nav - navigation button - bottom of screen - mobile only */}
         <BottomMobileNav />
       </Router>

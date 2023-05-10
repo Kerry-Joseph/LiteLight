@@ -1,6 +1,14 @@
 import { Link, useLocation } from "react-router-dom"
 
-export default function DeliveryBanner({ userInfo }) {
+export default function DeliveryBanner({ userInfo, authorized }) {
+
+  const loginOrLogout = () => {
+    if(authorized){
+      return "/logout"
+    } else {
+      return "/login"
+    }
+  }
 
   const displayedText = () => {
     if(userInfo.first_name && !userInfo.city){
@@ -13,7 +21,7 @@ export default function DeliveryBanner({ userInfo }) {
   }
 
   return (
-    <Link to={useLocation().pathname === '/login' ? "/" : "/login"}
+    <Link to={useLocation().pathname === loginOrLogout() ? "/" : loginOrLogout()}
     className="bg-green-800 relative md:hidden">
         <img src="https://cdn-icons-png.flaticon.com/512/16/16199.png" alt="map dropper" 
         className="absolute h-4 left-2 top-3"/>
