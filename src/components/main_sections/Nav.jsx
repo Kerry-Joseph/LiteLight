@@ -10,7 +10,6 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-
 } from 'react-router-dom'
 import axios from 'axios'
 import { useCallback, useEffect, useState } from 'react'
@@ -26,7 +25,6 @@ export default function Nav(){
     state: null
   })
 
-  console.log(userInfo)
   const [authorized, setAuthorized] = useState(false)
 
   const { REACT_APP_PASSPORT_API } = process.env
@@ -74,7 +72,6 @@ export default function Nav(){
   return (
     <nav className="bg-green-800 ">
       <Router>
-        
         <Routes>
           <Route path='/' element={false} />
           <Route path='/login' element={<Login />} />
@@ -91,12 +88,7 @@ export default function Nav(){
         <DeliveryBanner userInfo = {userInfo}/>
         {/* nav - navigation button - bottom of screen - mobile only */}
         <BottomMobileNav />
-
       </Router>
-        
-        
-        
-        
     </nav>
   )
 }

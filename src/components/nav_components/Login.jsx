@@ -19,7 +19,6 @@ export default function Login() {
   const { REACT_APP_LOGIN_API } = process.env
   
   const loginUser = () => {
-
     axios.post(REACT_APP_LOGIN_API, {
       email: formState.email,
       password: formState.password
@@ -54,7 +53,6 @@ export default function Login() {
     const tokenIndex = cookie.findIndex(() => 'token') + 1
     return cookie[tokenIndex]
   }
-console.log(getToken())
   
 
   return (

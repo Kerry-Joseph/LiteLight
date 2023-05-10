@@ -7,7 +7,7 @@ const { SECRET } = require('./enviornment_variables')
 
 
 // REGISTER VALIDATION --
-const validEmailCheck = check('email').isEmail().withMessage('Please provide avalid email.')
+const validEmailCheck = check('email').isEmail().withMessage('Please provide a valid email')
 
 const existingEmailCheck = check('email').custom( async(value) => {
   const { rows } = await db.query('SELECT * from users WHERE email = $1', [ value ])
@@ -17,7 +17,7 @@ const existingEmailCheck = check('email').custom( async(value) => {
   }
 })
 
-const passwordCheck = check('password').isLength({ min: 6, max: 15 }).withMessage('Password must be between 6 - 15 characters.')
+const passwordCheck = check('password').isLength({ min: 6, max: 15 }).withMessage('Password must be between 6 - 15 characters')
 
 const validationErrorCheck = (req, res, next) => {
   let err = validationResult(req)
