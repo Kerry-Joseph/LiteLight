@@ -27,7 +27,7 @@ export default function UpdateInfo({ userInfo }) {
     axios.put(REACT_APP_UPDATE_INFO_API, {
       first_name: formState.first_name,
       last_name: formState.last_name,
-      city: formState.city,
+      city: formState.city.charAt(0).toUpperCase() + formState.city.substring(1),
       state: formState.state.toUpperCase(),
       email: userInfo.email
     })

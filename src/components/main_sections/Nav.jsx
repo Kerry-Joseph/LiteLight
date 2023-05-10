@@ -2,10 +2,11 @@ import Search from '../nav_components/Search'
 import Categories from '../nav_components/Categories'
 import DeliveryBanner from '../nav_components/DeliveryBanner'
 import BottomMobileNav from '../nav_components/BottomMobileNav'
-import Register from '../nav_components/Register'
-import Login from '../nav_components/Login'
-import Logout from '../nav_components/Logout'
-import UpdateInfo from '../nav_components/UpdateInfo'
+import Register from '../account_modals/Register'
+import Login from '../account_modals/Login'
+import Logout from '../account_modals/Logout'
+import UpdateInfo from '../account_modals/UpdateInfo'
+import UpdatePassword from '../account_modals/UpdatePassword'
 import TokenCheck from '../nav_components/TokenCheck'
 import {
   BrowserRouter as Router,
@@ -79,6 +80,7 @@ export default function Nav(){
           <Route path='/logout' element={<Logout />} />
           <Route path='/register' element={<Register />} />
           <Route path='/update-info' element={<UpdateInfo userInfo={userInfo}/>} />
+          <Route path='/update-password' element={<UpdatePassword userInfo={userInfo}/>} />
           <Route path='/token' element={<TokenCheck />} />
         </Routes>
 
