@@ -66,15 +66,14 @@ router.put('/update-password', updatePasswordValidationChain, async(req, res) =>
 })
 
 router.put('/update-info', async(req, res) => {
-  const { id, email , first_name, last_name, city, state } = req.body
+  const { email , first_name, last_name, city, state } = req.body
   try {
-    await db.query('UPDATE users SET email = $1, first_name = $2, last_name = $3, city = $4, state = $5 WHERE id = $6', [
+    await db.query('UPDATE users SET first_name = $2, last_name = $3, city = $4, state = $5 WHERE email = $1', [
       email,
       first_name,
       last_name,
       city,
-      state,
-      id,
+      state
     ])
 
     res.status(200).json({

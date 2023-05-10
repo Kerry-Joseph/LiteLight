@@ -5,6 +5,7 @@ import BottomMobileNav from '../nav_components/BottomMobileNav'
 import Register from '../nav_components/Register'
 import Login from '../nav_components/Login'
 import Logout from '../nav_components/Logout'
+import UpdateInfo from '../nav_components/UpdateInfo'
 import TokenCheck from '../nav_components/TokenCheck'
 import {
   BrowserRouter as Router,
@@ -77,6 +78,7 @@ export default function Nav(){
           <Route path='/login' element={<Login />} />
           <Route path='/logout' element={<Logout />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/update-info' element={<UpdateInfo userInfo={userInfo}/>} />
           <Route path='/token' element={<TokenCheck />} />
         </Routes>
 
