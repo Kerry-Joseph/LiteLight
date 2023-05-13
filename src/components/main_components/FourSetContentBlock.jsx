@@ -13,7 +13,7 @@ export default function FourSetContentBlock({ lighter }) {
             className="w-full h-full relative lg:flex lg:flex-col cursor-pointer">
 
                 <div
-                style={{backgroundImage: `url(${lighter.image[0]})`}} 
+                style={{backgroundImage: `url(${process.env.PUBLIC_URL + lighter.image[0]})`}} 
                 className='h-[10.2rem] lg:h-[8.3rem] bg-cover mt-2 lg:mt-1 bg-center'>
                 </div>
 
@@ -30,7 +30,7 @@ export default function FourSetContentBlock({ lighter }) {
             className="w-full h-full relative lg:flex lg:flex-col cursor-pointer">
 
                 <div
-                style={{backgroundImage: `url(${lighter.image[1]})`}} 
+                style={{backgroundImage: `url(${process.env.PUBLIC_URL + lighter.image[1]})`}} 
                 className='h-[10.2rem] lg:h-[8.3rem] bg-cover mt-2 lg:mt-1 bg-center'>
                 </div>
 
@@ -47,7 +47,7 @@ export default function FourSetContentBlock({ lighter }) {
             className="w-full h-full relative lg:flex lg:flex-col cursor-pointer">
 
                 <div
-                style={{backgroundImage: `url(${lighter.image[2]})`}} 
+                style={{backgroundImage: `url(${process.env.PUBLIC_URL + lighter.image[2]})`}} 
                 className='h-[10.2rem] lg:h-[8.3rem] bg-cover mt-2 lg:mt-1 bg-center'>
                 </div>
 
@@ -64,7 +64,7 @@ export default function FourSetContentBlock({ lighter }) {
             className="w-full h-full relative lg:flex lg:flex-col cursor-pointer">
 
                 <div
-                style={{backgroundImage: `url(${lighter.image[3]})`}} 
+                style={{backgroundImage: `url(${process.env.PUBLIC_URL + lighter.image[3]})`}} 
                 className='h-[10.2rem] lg:h-[8.3rem] bg-cover mt-2 lg:mt-1 bg-center'>
                 </div>
 

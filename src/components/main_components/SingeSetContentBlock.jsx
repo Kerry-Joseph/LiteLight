@@ -13,7 +13,7 @@ export default function FourSetContentBlock({ lighter }) {
             className="w-full h-full relative flex flex-col cursor-pointer">
 
                 <div
-                style={{backgroundImage: `url(${lighter.image[0]})`}} 
+                style={{backgroundImage: `url(${process.env.PUBLIC_URL + lighter.image[0]})`}} 
                 className='h-full bg-cover mt-2 lg:mt-1 bg-center'>
                 </div>
 
