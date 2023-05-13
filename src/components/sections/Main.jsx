@@ -1,12 +1,12 @@
-import FourSetContentBlock from "../FourSetContentBlock"
-import SingleSetContentBlock from "../SingeSetContentBlock"
-import FullWidthContentBlock from "../FullWidthContentBlock"
-import ReturnsAndVisaAd from "../ReturnsAndVisaAd"
+import FourSetContentBlock from "../main_components/FourSetContentBlock"
+import SingleSetContentBlock from "../main_components/SingeSetContentBlock"
+import FullWidthContentBlock from "../main_components/FullWidthContentBlock"
+import ReturnsAndVisaAd from "../main_components/ReturnsAndVisaAd"
 
 import lighters from '../../lighters.json'
 import recs from '../../recommendations.json'
 
-import Banner from "../Banner"
+import Banner from "../main_components/Banner"
 
 export default function Main(){
 

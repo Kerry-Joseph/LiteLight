@@ -1,6 +1,6 @@
-import Nav from './components/main_sections/Nav';
-import Main from './components/main_sections/Main';
-import Footer from './components/main_sections/Footer';
+import Nav from './components/sections/Nav';
+import Main from './components/sections/Main';
+import Footer from './components/sections/Footer';
 
 
 function App() {
