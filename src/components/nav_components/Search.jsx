@@ -22,12 +22,10 @@ export default function Search({ userInfo, authorized }) {
             <h1>LiteLight</h1>
         </div>
 
-
-
         <div className="hidden lg:flex relative text-white min-w-max ml-1 mr-5 border border-transparent hover:border-white 
         rounded-sm pl-6 pr-2  justify-end flex-col cursor-pointer">
             {/* add delivery address */}
-            <img src="https://cdn-icons-png.flaticon.com/512/16/16199.png" alt="map dropper" 
+            <img src="/nav_images/pin.png" alt="map dropper" 
             className="h-4 absolute left-1.5 top-[1.3rem]"/>
             <p 
             className="text-xs font=semibold leading-[.5rem] pb-1.5">
@@ -39,12 +37,10 @@ export default function Search({ userInfo, authorized }) {
             </p>
         </div>
 
-
-
         <div className="w-full relative my-1 px-3.5 md:px-0">
             {/* search bar */}
 
-            <img src="https://icons.veryicon.com/png/o/internet--web/common-icons-for-web-pages/01-magnifying-glass.png" 
+            <img src="/nav_images/magnifying-glass.png" 
             alt="search magnifier" 
             className="h-6 absolute left-6 md:left-3 top-2.5 md:hidden"/>
 
@@ -54,7 +50,7 @@ export default function Search({ userInfo, authorized }) {
                 className="text-xs">
                     All
                 </p>
-                <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/arrow-small-down-512.png" 
+                <img src="/nav_images/down-arrow.png" 
                 alt="down arrow" 
                 className="h-6 opacity-75"/>
             </div>
@@ -65,14 +61,14 @@ export default function Search({ userInfo, authorized }) {
 
             <div className="hidden md:flex items-center absolute right-0 top-0 bg-orange-300 rounded-r-md h-full w-12 p-3
              hover:bg-orange-400 cursor-pointer">
-                <img src="https://icons.veryicon.com/png/o/internet--web/common-icons-for-web-pages/01-magnifying-glass.png" 
+                <img src="/nav_images/magnifying-glass.png" 
                 alt="search magnifier" 
                 className="h-6 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"/>
             </div>
 
-            <img src="https://icons.veryicon.com/png/o/miscellaneous/phoenix-project-icon-library/scan-59.png" alt="scan" 
+            <img src="/nav_images/scan.png" alt="scan" 
             className="md:hidden h-6 absolute right-20 top-2.5 cursor-pointer"/>
-            <img src="https://cdn4.iconfinder.com/data/icons/basic-flat-ui-extra-set-200-item/76/ui_ux_minimalist_button_microphone_vouce_sound-512.png" 
+            <img src="/nav_images/mic.png" 
             alt="mic" 
             className="md:hidden h-[2.1rem] absolute right-8 top-1 cursor-pointer"/>
         </div>
@@ -82,14 +78,14 @@ export default function Search({ userInfo, authorized }) {
         <div className="hidden lg:flex border border-transparent hover:border-white ml-5 mr-1 px-2 pr-4 items-center 
         text-white min-w-max relative rounded-sm cursor-pointer">
             {/* language */}
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/255px-Flag_of_the_United_States.svg.png" 
+            <img src="/nav_images/flag.png" 
             alt="american flag" 
             className="h-4"/>
             <p
             className="font-bold px-1">
                 EN
             </p>
-            <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/arrow-small-down-512.png" alt="down arrow" 
+            <img src="/nav_images/down-arrow.png" alt="down arrow" 
             className="h-7 absolute -right-1 top-2.5"/>
         </div>
 
@@ -103,7 +99,7 @@ export default function Search({ userInfo, authorized }) {
                 { userInfo.first_name ? `${userInfo.first_name} ${userInfo.last_name}` : 'Sign-in' }<br/>
                 <span className="text-sm font-bold"> Accounts & Lists</span>
             </p>
-            <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/arrow-small-down-512.png" alt="down arrow" 
+            <img src="/nav_images/down-arrow.png" alt="down arrow" 
             className="h-7 absolute -right-0.5 top-4.5"/>
         </Link>
 
@@ -125,7 +121,7 @@ export default function Search({ userInfo, authorized }) {
         <div className="hidden md:flex relative text-white min-w-max ml-1 mr-5 border border-transparent hover:border-white 
         rounded-sm px-2 justify-center items-end cursor-pointer">
             {/* cart */}
-            <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="cart" 
+            <img src="/nav_images/cart.png" alt="cart" 
             className="h-8 mb-[.55rem]"/>
             <p
             className="text-sm font-bold py-[.3rem]">

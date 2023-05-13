@@ -6,7 +6,7 @@ export default function Categories() {
     [&_p]:px-2 [&_p]:py-1 [&_p]:ml-1 [&_p]:my-1 [&_p]:min-w-max [&_p]:cursor-pointer
     font-medium text-sm md:bg-green-700 lg:px-2">
         <p className="hidden md:flex items-center">
-            <img src="https://static.thenounproject.com/png/67738-200.png" alt="menu icon" 
+            <img src="/nav_images/menu.png" alt="menu icon" 
             className="h-5"/>
             <span className="font-bold px-1">
                 All

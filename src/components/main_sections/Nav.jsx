@@ -7,7 +7,6 @@ import Login from '../account_modals/Login'
 import Logout from '../account_modals/Logout'
 import UpdateInfo from '../account_modals/UpdateInfo'
 import UpdatePassword from '../account_modals/UpdatePassword'
-import TokenCheck from '../nav_components/TokenCheck'
 import {
   BrowserRouter as Router,
   Route,
@@ -87,7 +86,6 @@ export default function Nav(){
           <Route path='/update-password' element={<UpdatePassword 
             userInfo={userInfo}
             authorized = {authorized}/>} />
-          <Route path='/token' element={<TokenCheck />} />
         </Routes>
 
         {/* nav - search */}
