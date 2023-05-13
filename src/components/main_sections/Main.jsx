@@ -20,7 +20,7 @@ export default function Main(){
                     </h1>
 
                     <section
-                    style={{backgroundImage: `url(${rec.img})`}}
+                    style={{backgroundImage: `url(${process.env.PUBLIC_URL + rec.img})`}}
                     className="h-[8rem] bg-cover bg-center rounded-b-md">
 
                     </section>
@@ -45,12 +45,12 @@ export default function Main(){
                     <MobileRecs />
                 </div>
 
-                <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/Mobile_AD_FORMATS3-1.png"})`}}
+                <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/main_images/mobile_banners/banana-banner.png"})`}}
                 className='h-20 w-full bg-center bg-cover mt-2 md:hidden'>
                     {/* main - banner ad - mobile only */}
                 </div>
 
-                <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/Adver--Banners--150x750px-RIOT.jpg"})`}}
+                <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/main_images/mobile_banners/ad-banner.jpg"})`}}
                 className='h-20 w-full bg-center bg-cover mt-2 mb-1 md:hidden'>
                     {/* main - banner ad - mobile only */}
                 </div>

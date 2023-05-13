@@ -55,7 +55,7 @@ export default function Banner() {
         <div className="[&_div]:h-64 lg:[&_div]:h-[42rem] [&_div]:w-full">
             {/* main - banner images */}
 
-            <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/bic_gallery.webp"})`, textShadow: "1px 1px 2px black"}}
+            <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "main_images/banner/bic-gallery.webp"})`, textShadow: "1px 1px 2px black"}}
             className={`${bannerImage.bicGallery} bg-[center_top_-7rem] lg:bg-cover lg:bg-[center_top_-30rem]
             justify-center lg:justify-between lg:px-5 text-6xl lg:text-8xl pt-32 md:pt-0 lg:pt-16 text-white font-black
             text-center md:text-green-400`}>
@@ -68,7 +68,7 @@ export default function Banner() {
             </div>
 
 
-            <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/zippo_65.jpg"})`}}
+            <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "main_images/banner/zippo-65.jpg"})`}}
             className={`${bannerImage.zippo65} bg-center bg-top bg-left bg-cover  
             lg:bg-[center_top_-18rem] pl-3 pt-14 lg:pl-28 xl:pl-52 lg:pt-20 md:pl-16 md:pt-8 font-lora`}>
                 {/* ZIPPO 65 */}
@@ -88,7 +88,7 @@ export default function Banner() {
                 </p>
             </div>
 
-            <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/matches.png"})`, textShadow: '2px 2px 2px black'}}
+            <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "main_images/banner/matches.png"})`, textShadow: '2px 2px 2px black'}}
             className={`${bannerImage.matches} bg-cover flex flex-col pb-14 font-lora text-white
             font-bold text-3xl items-center justify-end md:bg-[center_top_-3rem] lg:bg-[center_top_-5rem] lg:justify-start 
             lg:pt-10`}>
@@ -102,7 +102,7 @@ export default function Banner() {
             </div>
             
             
-            <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "/torches.png"})`}}
+            <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + "main_images/banner/torches.png"})`}}
             className={`${bannerImage.torches} bg-cover bg-center flex justify-between lg:justify-start flex-col
             text-white p-10 pb-16 md:bg-[center_top_-11rem] lg:pl-[25rem] xl:pl-[30rem] lg:pt-20 z-0`}>
                 {/* TORCHES */}

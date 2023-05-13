@@ -2,41 +2,41 @@
     {
         "id" : 1,
         "title" : "Keep shopping for",
-        "img" : "https://cdn.shopify.com/s/files/1/0632/5767/3960/products/IMG_20220501_114949_048.webp?v=1651420200"
+        "img" : "/main_images/mobile_recs/zebra.webp"
     },
     {
         "id" : 2,
         "title" : "Recommended for you",
-        "img" : "https://rlv.zcache.com/weird_blue_eye_with_dots_abstract_psychedelic_art_zippo_lighter-rf5c7071d08004777ba37addaa6cbc2b6_zvqyz_736.webp?rlvnet=1"
+        "img" : "/main_images/mobile_recs/eye-zippo.webp"
     },
     {
         "id" : 3,
         "title" : "For you",
-        "img" : "https://canary.contestimg.wish.com/api/webimage/6120b0b4c935f8d482ec9a52-large.jpg?cache_buster=b90a960553587bd42d4907ca8e54bd9c"
+        "img" : "/main_images/mobile_recs/pig.webp"
     },
     {
         "id" : 4,
         "title" : "Pick up where you left off",
-        "img" : "https://images.heb.com/is/image/HEBGrocery/005906540"
+        "img" : "/main_images/mobile_recs/mk-torches.jpg"
     },
     {
         "id" : 5,
         "title" : "Inspired by your Wish List",
-        "img" : "https://kingofcocaine.com/wp-content/uploads/2019/06/Genuine-IMCO-Lighter-Vintage-Copper-Kerosene-Lighters-Retro-Flame-Petrol-Lighter-Novelty-Gadget-Original-Oil-gasoline.jpg"
+        "img" : "/main_images/mobile_recs/vintage-copper.jpg"
     },
     {
         "id" : 6,
         "title" : "Buy it again",
-        "img" : "https://pics.drugstore.com/prodimg/418227/450.jpg"
+        "img" : "/main_images/mobile_recs/lighter-fluid.avif"
     },
     {
         "id" : 7,
         "title" : "New from Zippo",
-        "img" : "https://cdn.shopify.com/s/files/1/0330/5291/7896/products/Img50313_900x.jpg?v=1617242983"
+        "img" : "/main_images/mobile_recs/ingraved-silver.webp"
     },
     {
         "id" : 8,
         "title" : "Tap to browse",
-        "img" : "https://i.etsystatic.com/17069291/r/il/d69fc9/2685529928/il_fullxfull.2685529928_jda2.jpg" 
+        "img" : "/main_images/mobile_recs/candy-blue.avif" 
     }
 ]
