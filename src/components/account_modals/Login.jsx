@@ -26,7 +26,6 @@ export default function Login() {
       password: formState.password
     })
     .then(res => {
-      console.log (res.data)
       const currentTime = new Date()
       const sinceEpoch = currentTime.getTime()
       const daysInMiliseconds = (days) => {

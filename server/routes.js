@@ -35,7 +35,7 @@ router.post('/register', registerValidationChain, async(req, res) => {
       message: 'registration successfull'
     })
   } catch (err) {
-    console.log(err)
+    
     return res.status(500).json({
       error: err.message
     })
@@ -103,7 +103,6 @@ router.post('/login', loginValidationChain, (req, res) => {
     return res.status(200).json(token)
 
   } catch (err) {
-    console.log(err.message)
     return res.status(500).json({
       error: err.message
     })
@@ -120,7 +119,6 @@ router.get('/logout', (req, res) => {
       message: 'logout successful'
     })
   } catch (err) {
-    console.log(err.message)
     return res.status(500).json({
       error: err.message
     })
@@ -133,7 +131,6 @@ router.post('/passport', tokenPassportCheck, (req, res) => {
   try {
     return res.status(200).json(req.user)
   } catch (err) {
-    console.log(err.message)
     return res.status(500).json({
       error: err.message
     })

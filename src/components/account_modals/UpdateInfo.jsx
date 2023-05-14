@@ -35,14 +35,13 @@ export default function UpdateInfo({ userInfo, authorized }) {
       window.location.href = 'http://localhost:3000'
     })
     .catch(err => {
-      console.log(err)
+      console.log("update error")
     })
   }
   
   
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(formState)
     updateUser()
   }
 

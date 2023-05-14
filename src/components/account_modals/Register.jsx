@@ -33,13 +33,11 @@ export default function Register() {
       password: formState.password
     })
     .then(() => {
-
       axios.post(REACT_APP_LOGIN_API, {
         email: formState.email,
         password: formState.password
       })
       .then(res => {
-        console.log (res.data)
         const currentTime = new Date()
         const sinceEpoch = currentTime.getTime()
         const daysInMiliseconds = (days) => {
@@ -51,7 +49,7 @@ export default function Register() {
         window.location.href = 'http://localhost:3000'
       })
       .catch(err => {
-        console.log(err)
+        console.log("register error")
       })
 
     })

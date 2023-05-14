@@ -97,7 +97,6 @@ passport.use (
       return done(null, user)
       
     } catch (err) {
-      console.log(err.message)
       done(err.message, false)
     }
   })
