@@ -8,6 +8,8 @@ export default function UpdatePassword({ userInfo, authorized }) {
     current_password: '',
     new_password: ''
   })
+
+  const [errorMessage, setErrorMessage] = useState("")
   
 
   const handleChange = e => {
@@ -32,7 +34,7 @@ export default function UpdatePassword({ userInfo, authorized }) {
       window.location.href = 'http://localhost:3000'
     })
     .catch(err => {
-      console.log(err)
+      setErrorMessage(err.response.data.errors.email ? err.response.data.errors.email.msg :  err.response.data.errors.new_password.msg)
     })
   }
   
@@ -57,6 +59,12 @@ export default function UpdatePassword({ userInfo, authorized }) {
       
       <form onSubmit={handleSubmit} className="flex flex-col w-screen bg-green-800 md:w-[20rem] md:rounded-b-md md:border-b md:border-l md:bg-green-900 
       lg:border-r lg:rounded-b-md">
+
+        <p className="px-2 font-bold text-red-500">
+          {errorMessage}
+        </p>
+
+
         <label htmlFor="current_password" className="p-2 font-semibold text-white">
           Current Password
         </label>

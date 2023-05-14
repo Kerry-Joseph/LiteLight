@@ -56,7 +56,7 @@ const updatePasswordValidation = check('email').custom( async(value, { req }) =>
   const currentPasswordCheck = await compare(req.body.current_password, user.rows[0].password)
 
   if(!currentPasswordCheck){
-    throw new Error('Invalid Credentials')
+    throw new Error('Invalid Password')
   }
 
   req.user = user.rows[0]

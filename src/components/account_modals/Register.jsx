@@ -11,13 +11,15 @@ export default function Register() {
     password: ''
   })
   
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleChange = e => {
     SetFormState(prev => ({
       ...prev, [e.target.name]: e.target.value
     }))
   }
-    
+   
+  
 
 
   const { REACT_APP_REGISTER_API, REACT_APP_LOGIN_API } = process.env
@@ -54,7 +56,7 @@ export default function Register() {
 
     })
     .catch(err => {
-      console.log(err)
+      setErrorMessage(err.response.data.errors.email ? err.response.data.errors.email.msg :  err.response.data.errors.password.msg)
     })
   }
   
@@ -81,9 +83,14 @@ export default function Register() {
 
   return (
     <div className="absolute top-[8.5rem] z-20 md:top-[3.5rem] md:right-0 lg:right-[11rem]">
-      
+
       <form onSubmit={handleSubmit} className="flex flex-col w-screen bg-green-800 md:w-[20rem] md:rounded-b-md md:border-b md:border-l md:bg-green-900 
       lg:border-r lg:rounded-b-md">
+
+        <p className="px-2 font-bold text-red-500">
+          {errorMessage}
+        </p>
+
         <label htmlFor="first_name" className="p-2 font-semibold text-white">
           First Name
         </label>

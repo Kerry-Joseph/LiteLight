@@ -10,6 +10,8 @@ export default function Login() {
     password: ''
   })
   
+  const [errorMessage, setErrorMessage] = useState("")
+
   const handleChange = e => {
     SetFormState(prev => ({
       ...prev, [e.target.name]: e.target.value
@@ -36,7 +38,7 @@ export default function Login() {
       window.location.href = 'http://localhost:3000'
     })
     .catch(err => {
-      console.log(err)
+      setErrorMessage(err.response.data.errors.email ? err.response.data.errors.email.msg :  err.response.data.errors.password.msg)
     })
   }
 
@@ -53,6 +55,11 @@ export default function Login() {
       <form onSubmit={handleSubmit} 
       className="flex flex-col w-screen bg-green-800 md:w-[20rem] md:rounded-b-md md:border-b md:border-l md:bg-green-900 
       lg:border-r lg:rounded-b-md">
+        
+        <p className="px-2 font-bold text-red-500">
+          {errorMessage}
+        </p>
+
         <label htmlFor="email" className="p-2 font-semibold text-white">
           Enter Email
         </label>
