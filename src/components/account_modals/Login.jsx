@@ -37,6 +37,7 @@ export default function Login() {
       window.location.href = 'http://localhost:3000'
     })
     .catch(err => {
+      console.log(err)
       setErrorMessage(err.response.data.errors.email ? err.response.data.errors.email.msg :  err.response.data.errors.password.msg)
     })
   }
