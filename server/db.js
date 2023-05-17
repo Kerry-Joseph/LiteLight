@@ -1,11 +1,11 @@
-const { DB_PASSWORD } = require('./enviornment_variables')
+const { DB_PASSWORD, DB_HOST } = require('./enviornment_variables')
 const { Pool } = require('pg')
 const pool = new Pool({
   user: 'postgres',
-  host: 'localhost',
+  host: DB_HOST,
   database: 'litelight',
   password: DB_PASSWORD,
-  port: 2345
+  port: 5432
 })
 
 module.exports = {
