@@ -32,7 +32,7 @@ export default function UpdateInfo({ userInfo, authorized }) {
       email: userInfo.email
     })
     .then(() => {
-      window.location.href = 'http://localhost:3000'
+      window.location.href = 'https://litelight.vercel.app/'
     })
     .catch(err => {
       console.log("update error")

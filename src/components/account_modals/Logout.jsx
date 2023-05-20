@@ -3,7 +3,7 @@ import { Link, Navigate } from 'react-router-dom'
 export default function Logout({ authorized }) {
   const logout = () => {
     document.cookie = "token="
-    window.location.reload()
+    window.location.href = 'https://litelight.vercel.app/'
   }
 
 

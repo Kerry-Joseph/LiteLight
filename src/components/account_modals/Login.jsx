@@ -34,7 +34,7 @@ export default function Login() {
       document.cookie = `token=${res.data}; expires=${(sinceEpoch + daysInMiliseconds(60)) }`
     })
     .then(() => {
-      window.location.href = 'http://localhost:3000'
+      window.location.href = 'https://litelight.vercel.app/'
     })
     .catch(err => {
       console.log(err)

@@ -31,7 +31,7 @@ export default function UpdatePassword({ userInfo, authorized }) {
     })
     .then(() => {
       document.cookie = "token="
-      window.location.href = 'http://localhost:3000'
+      window.location.href = 'https://litelight.vercel.app/'
     })
     .catch(err => {
       setErrorMessage(err.response.data.errors.email ? err.response.data.errors.email.msg :  err.response.data.errors.new_password.msg)

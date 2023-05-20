@@ -24,5 +24,5 @@ try {
     console.log(`listening on ${PORT}`)
   })
 } catch (err) {
-  console.log(err)
+  console.log('server error')
 }
