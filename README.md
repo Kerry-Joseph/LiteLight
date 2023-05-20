@@ -1,13 +1,10 @@
 ## **LiteLight**
 
-## A single page lighter e-commerce site
-LiteLight is single page Amazon clone for lighters.
+## A PERN stack authentication representaion
+LiteLight is single page PERN stack Amazon clone for lighters. The user can create, update, login, and logout of an account.
 
 ## Technology used in development
-React.js | HTML/JSX | Tailwind CSS | Node.js
-
-## Known Issues
-- There is no functonality in its current state 
+React.js | HTML/JSX | Tailwind CSS | Node.js | PostgrSQL | Expressjs | AWS
 
 # [**Go To LiteLight**](https://litelight.vercel.app/)
 
