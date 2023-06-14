@@ -3,7 +3,7 @@
   </h1>
 
   <h2 style="text-align:center; font-weight:4px">
-    A PERN stack authentication demo
+    PERN stack authentication demo
   </h2>
 
 [![Icarus Pizza](https://i.imgur.com/DVqmPuQ.jpg)](https://litelight.vercel.app/)
