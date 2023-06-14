@@ -12,9 +12,9 @@ export default function DeliveryBanner({ userInfo, authorized }) {
 
   const displayedText = () => {
     if(userInfo.first_name && !userInfo.city){
-      return 'Add delivery address'
+      return `${userInfo.first_name} ${userInfo.last_name} | Add Address`
     } else if(userInfo.first_name && userInfo.city){
-      return `${userInfo.first_name}, ${userInfo.last_name} | ${userInfo.city}, ${userInfo.state}` 
+      return `${userInfo.first_name} ${userInfo.last_name} | ${userInfo.city}, ${userInfo.state}` 
     } else {
       return 'Sign-in / Add delivery address'
     }

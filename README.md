@@ -3,7 +3,7 @@
   </h1>
 
   <h2 style="text-align:center; font-weight:4px">
-    A PERN stack authentication representaion
+    A PERN stack authentication demo
   </h2>
 
 [![Icarus Pizza](https://i.imgur.com/DVqmPuQ.jpg)](https://litelight.vercel.app/)
@@ -14,6 +14,7 @@
 - A user can update their password.
 
 ## Technology used in development
+
 React.js | HTML/JSX | Tailwind CSS | Node.js | PostgreSQL | Expressjs | AWS
 
 
