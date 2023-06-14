@@ -1,11 +1,19 @@
-## **LiteLight**
+  <h1 style="text-align:center; font-weight:bold; font-size: 40px">
+    LiteLight
+  </h1>
 
-## A PERN stack authentication representaion
-LiteLight is single page PERN stack Amazon clone for lighters. The user can create, update, login, and logout of an account.
+  <h2 style="text-align:center; font-weight:4px">
+    A PERN stack authentication representaion
+  </h2>
+
+[![Icarus Pizza](https://i.imgur.com/DVqmPuQ.jpg)](https://litelight.vercel.app/)
+# [**Go To LiteLight**](https://litelight.vercel.app/)
+
+- A user can login, logout, update, and create an account.
+- A user can add a city and state to their account.
+- A user can update their password.
 
 ## Technology used in development
 React.js | HTML/JSX | Tailwind CSS | Node.js | PostgreSQL | Expressjs | AWS
 
-# [**Go To LiteLight**](https://litelight.vercel.app/)
 
-[![Icarus Pizza](https://i.imgur.com/DVqmPuQ.jpg)](https://litelight.vercel.app/)
